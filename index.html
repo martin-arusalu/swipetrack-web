@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SwipeTrack — The Pocket Track Meet for iPhone</title>
+  <meta name="description" content="SwipeTrack is a tactile, swipe-driven track running game for iPhone. Race 100m to 10,000m on an IAAF stadium, manage stamina, beat NPC rivals, and chase your personal records." />
+  <meta name="theme-color" content="#07080c" />
+  <meta property="og:title" content="SwipeTrack — Pocket Track Meet" />
+  <meta property="og:description" content="Race 100m to 10,000m. Swipe left, swipe right, find your rhythm. Coming soon to the App Store." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="SwipeTrack home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        SwipeTrack
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Game</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#screenshots">Screenshots</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <button class="nav-burger" aria-label="Menu"><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-track" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content" style="max-width: 720px;">
+        <span class="eyebrow"><span class="dot"></span> Coming soon to iPhone</span>
+        <h1>
+          <span class="line"><span>Swipe left.</span></span>
+          <span class="line"><span>Swipe right.</span></span>
+          <span class="line"><span class="gradient-text">Find your rhythm.</span></span>
+        </h1>
+        <p class="hero-sub">
+          SwipeTrack is a tactile track-running game built around real biomechanics.
+          Alternate downward swipes to drive your runner around an IAAF stadium —
+          from a 10-second 100m sprint to a 25-lap 10,000m duel.
+        </p>
+        <div class="hero-cta" id="download">
+          <a class="app-store-btn" href="#" aria-label="Download on the App Store (coming soon)">
+            <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.21-1.21 3.04-.81.86-2.12 1.51-3.21 1.42-.13-1.12.42-2.27 1.16-3.05.83-.86 2.24-1.51 3.26-1.41zM20.5 17.36c-.55 1.27-.81 1.83-1.52 2.95-.99 1.55-2.39 3.49-4.13 3.51-1.55.02-1.95-1.01-4.06-1-2.11.01-2.55 1.02-4.1 1-1.74-.02-3.07-1.77-4.06-3.32C-.05 16.43-.4 11.4 1.5 8.7c1.34-1.92 3.46-3.05 5.46-3.05 2.04 0 3.32 1.12 5.01 1.12 1.64 0 2.64-1.12 5-1.12 1.79 0 3.69.97 5.04 2.66-4.43 2.43-3.71 8.76.49 9.05z"/></svg>
+            <span class="as-text">
+              <span class="as-small">Download on the</span>
+              <span class="as-big">App Store <span class="coming-pill">Coming Soon</span></span>
+            </span>
+          </a>
+          <a class="btn btn-ghost" href="#screenshots">See screenshots ↓</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item"><span class="meta-num"><span data-count="7" data-suffix="">0</span></span><span class="meta-lbl">Race distances</span></div>
+          <div class="meta-item"><span class="meta-num"><span data-count="400" data-suffix="m">0m</span></span><span class="meta-lbl">IAAF lap</span></div>
+          <div class="meta-item"><span class="meta-num"><span data-count="7" data-suffix=" AI">0 AI</span></span><span class="meta-lbl">Rivals per race</span></div>
+          <div class="meta-item"><span class="meta-num"><span data-count="100" data-suffix="">0</span></span><span class="meta-lbl">Levels per event</span></div>
+        </div>
+      </div>
+
+      <!-- Hero video placeholder -->
+      <div class="hero-video reveal" style="margin-top: 60px;">
+        <div class="video-frame" style="aspect-ratio: 1 / 2; max-width: 400px; margin: 0 auto;">
+          <!-- Replace VIDEO_URL_HERE with your gameplay video URL (1000x2000px) -->
+          <video class="hero-vid" src="./record.mov" poster="sprint.png" playsinline muted loop style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius-xl); position: absolute; inset: 0; z-index: 1;"></video>
+          <div class="video-placeholder">
+            <button class="play-button" aria-label="Play gameplay video" onclick="const v=this.closest('.video-frame').querySelector('video');v.play();this.closest('.video-placeholder').style.display='none';">
+              <svg viewBox="0 0 24 24" fill="#0a0a0a" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <small>Tap to play</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>100m</span><span>200m</span><span>400m</span><span>800m</span><span>1500m</span><span>5000m</span><span>10,000m</span>
+      <span>IAAF stadium</span><span>Real biomechanics</span><span>Global leaderboard</span><span>100 levels per event</span><span>8 lanes</span>
+      <span>100m</span><span>200m</span><span>400m</span><span>800m</span><span>1500m</span><span>5000m</span><span>10,000m</span>
+      <span>IAAF stadium</span><span>Real biomechanics</span><span>Global leaderboard</span><span>100 levels per event</span><span>8 lanes</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Built for runners, not button mashers</span>
+        <h2 class="gradient-text">A whole stadium in your pocket.</h2>
+        <p>Every part of SwipeTrack is modeled on real track athletics — from the tartan surface to the way fatigue eats your last stretch if you went out too hard.</p>
+      </div>
+
+      <div class="features-grid reveal-stagger">
+
+        <article class="feature-card large">
+          <span class="feature-icon">⚡</span>
+          <h3>Tactile swipe propulsion</h3>
+          <p>Two-thumb gameplay with downward swipes. Each swipe builds drive, decays exponentially, and rewards clean left-right alternation with combo speed.</p>
+          <span class="feature-tag">Drive · Combo · Quality</span>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">🏟️</span>
+          <h3>True 400m IAAF track</h3>
+          <p>8 lanes, proper staggered starts, curves, straights, and a finish line. Built for accuracy.</p>
+          <span class="feature-tag">Stadium</span>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">🫁</span>
+          <h3>Stamina that actually matters</h3>
+          <p>Stamina drains with effort² and recovers when you ease off. Push too hard early — pay for it on the home stretch.</p>
+          <span class="feature-tag">Pacing</span>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>Seven rival AI runners</h3>
+          <p>Front Runners, Even Pacers, Closers and Wild Cards each race with their own strategy. Reading them is half the win.</p>
+          <span class="feature-tag">NPC strategies</span>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">📈</span>
+          <h3>100 levels per event</h3>
+          <p>Climb seven separate ladders with 100 levels each, plus 100 attribute levels. Probation and Thin-Ice states keep promotions earned, never gifted.</p>
+          <span class="feature-tag">Progression</span>
+        </article>
+
+        <article class="feature-card large">
+          <span class="feature-icon">🌍</span>
+          <h3>Global leaderboard</h3>
+          <p>Compete worldwide across every distance. Leaderboards for best race times, top speed, max distance ran, and best average speed.</p>
+          <span class="feature-tag">Compete · Rankings · Global</span>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">🏆</span>
+          <h3>Personal records &amp; stats</h3>
+          <p>Best times per event, all-time max speed, total distance run. Your progress is always tracked.</p>
+          <span class="feature-tag">Records · Stats</span>
+        </article>
+
+      </div>
+
+      <!-- distance chips -->
+      <div class="reveal" style="margin-top: 60px;">
+        <div class="section-head" style="margin-bottom: 20px;">
+          <h3 style="font-size: 1.2rem; color: var(--text-mute); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;">Seven races to master</h3>
+        </div>
+        <div class="distances">
+          <div class="distance-chip">100m <span>· sprint</span></div>
+          <div class="distance-chip">200m <span>· bend</span></div>
+          <div class="distance-chip">400m <span>· lactic</span></div>
+          <div class="distance-chip">800m <span>· tactical</span></div>
+          <div class="distance-chip">1500m <span>· metric mile</span></div>
+          <div class="distance-chip">5000m <span>· endurance</span></div>
+          <div class="distance-chip">10,000m <span>· grind</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section id="screenshots" class="stats-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> In-game</span>
+        <h2>See it in action<span class="gradient-text">.</span></h2>
+      </div>
+
+      <div class="shots reveal-stagger">
+        <!-- Replace src with your screenshot URLs -->
+        <div class="shot"><img src="curve.png" alt="SwipeTrack screenshot 1" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" /></div>
+        <div class="shot"><img src="main.png" alt="SwipeTrack screenshot 2" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" /></div>
+        <div class="shot"><img src="stats.png" alt="SwipeTrack screenshot 3" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" /></div>
+        <div class="shot"><img src="attrs.png" alt="SwipeTrack screenshot 4" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Designed with depth</span>
+        <h2>Numbers behind the run.</h2>
+      </div>
+      <div class="stats-grid reveal-stagger">
+        <div class="stat"><div class="num"><span data-count="7" data-suffix="">0</span></div><div class="lbl">Race distances</div></div>
+        <div class="stat"><div class="num"><span data-count="8" data-suffix="">0</span></div><div class="lbl">Lanes per race</div></div>
+        <div class="stat"><div class="num"><span data-count="100" data-suffix="">0</span></div><div class="lbl">Levels per event</div></div>
+        <div class="stat"><div class="num"><span data-count="7" data-suffix="">0</span></div><div class="lbl">AI rivals in every race</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Common questions</span>
+        <h2>Good to know.</h2>
+      </div>
+      <div class="faq reveal-stagger">
+
+        <div class="faq-item">
+          <button class="faq-q">What devices are supported?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">SwipeTrack is built for iPhone running iOS 15 or later. iPad support is planned for a future update.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Do I need an internet connection?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">You can race offline — all distances, NPCs and progression work without connectivity. An internet connection is required for the global leaderboard.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">How does the swipe input work?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Swipe downward on the left half of the screen for your left foot, right half for your right foot. Alternating cleanly builds combo and drive — repeating the same side bleeds momentum and forces you to recover.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Is the running model realistic?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Drive, stamina drain, fatigue accumulation and acceleration are all modeled to mirror real athletic effort. World-record times are intentionally just out of reach.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">How does the global leaderboard work?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Every race distance has its own global leaderboard. There are also leaderboards for top speed, maximum distance ran, and best average speed. Compete against runners worldwide and climb the rankings.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-card reveal">
+        <span class="eyebrow"><span class="dot"></span> Be first on the start line</span>
+        <h2 class="gradient-text">Your stadium is waiting.</h2>
+        <p>Download SwipeTrack the moment it lands on the App Store and start chasing your first record before the day is out.</p>
+        <div class="hero-cta">
+          <a class="app-store-btn" href="#" aria-label="Download on the App Store (coming soon)">
+            <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.21-1.21 3.04-.81.86-2.12 1.51-3.21 1.42-.13-1.12.42-2.27 1.16-3.05.83-.86 2.24-1.51 3.26-1.41zM20.5 17.36c-.55 1.27-.81 1.83-1.52 2.95-.99 1.55-2.39 3.49-4.13 3.51-1.55.02-1.95-1.01-4.06-1-2.11.01-2.55 1.02-4.1 1-1.74-.02-3.07-1.77-4.06-3.32C-.05 16.43-.4 11.4 1.5 8.7c1.34-1.92 3.46-3.05 5.46-3.05 2.04 0 3.32 1.12 5.01 1.12 1.64 0 2.64-1.12 5-1.12 1.79 0 3.69.97 5.04 2.66-4.43 2.43-3.71 8.76.49 9.05z"/></svg>
+            <span class="as-text">
+              <span class="as-small">Download on the</span>
+              <span class="as-big">App Store <span class="coming-pill">Soon</span></span>
+            </span>
+          </a>
+          <a class="btn btn-ghost" href="support.html">Get notified</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-col foot-brand">
+          <a class="brand" href="index.html"><span class="brand-mark"></span> SwipeTrack</a>
+          <p>A pocket-sized stadium built for runners. Crafted with care for iPhone.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Game</h4>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#screenshots">Screenshots</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>Support</h4>
+          <a href="support.html">Help Center</a>
+          <a href="mailto:support@swipetrack.run">Email us</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year">2026</span> SwipeTrack. All rights reserved.</span>
+        <span>Made with care for runners everywhere.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
