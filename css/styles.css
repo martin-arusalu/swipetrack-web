@@ -4,9 +4,9 @@
    ============================================================ */
 
 :root {
-  --bg-0: #07080c;
-  --bg-1: #0c0e14;
-  --bg-2: #11141d;
+  --bg-0: #0d0a05;
+  --bg-1: #130f07;
+  --bg-2: #1a1409;
   --surface: rgba(255, 255, 255, 0.04);
   --surface-strong: rgba(255, 255, 255, 0.07);
   --border: rgba(255, 255, 255, 0.08);
@@ -16,14 +16,14 @@
   --text-dim: #a4a9b8;
   --text-mute: #6b7184;
 
-  --accent: #ff4d5a;          /* tartan red */
-  --accent-2: #ffb547;         /* podium gold */
-  --accent-3: #4ade80;         /* player green */
-  --accent-4: #5b8cff;         /* lane blue */
+  --accent: #f07c1a;          /* warm orange */
+  --accent-2: #f5c233;         /* yellow-gold */
+  --accent-3: #d4954a;         /* amber */
+  --accent-4: #c97b3a;         /* burnt orange */
 
-  --grad-hero: radial-gradient(1200px 600px at 70% -10%, rgba(255, 77, 90, 0.25), transparent 60%),
-               radial-gradient(900px 600px at 10% 20%, rgba(91, 140, 255, 0.18), transparent 55%),
-               radial-gradient(700px 500px at 50% 90%, rgba(74, 222, 128, 0.10), transparent 60%);
+  --grad-hero: radial-gradient(1200px 600px at 70% -10%, rgba(240, 124, 26, 0.25), transparent 60%),
+               radial-gradient(900px 600px at 10% 20%, rgba(201, 123, 58, 0.18), transparent 55%),
+               radial-gradient(700px 500px at 50% 90%, rgba(245, 194, 51, 0.10), transparent 60%);
 
   --radius-sm: 10px;
   --radius: 18px;
@@ -31,7 +31,7 @@
   --radius-xl: 40px;
 
   --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 0 1px rgba(255, 77, 90, 0.35), 0 18px 60px rgba(255, 77, 90, 0.25);
+  --shadow-glow: 0 0 0 1px rgba(240, 124, 26, 0.35), 0 18px 60px rgba(240, 124, 26, 0.25);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
