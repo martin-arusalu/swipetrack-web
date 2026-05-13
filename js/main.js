@@ -24,7 +24,13 @@
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('in');
+    } else {
+      io.observe(el);
+    }
+  });
 
   // ---------- FAQ ----------
   document.querySelectorAll('.faq-item').forEach(item => {
