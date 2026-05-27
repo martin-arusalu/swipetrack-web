@@ -954,6 +954,56 @@ footer {
 .contact-card a { color: var(--accent); font-weight: 600; display: inline-block; margin-top: 10px; }
 
 /* ============================================================
+   BLOG / RELEASE NOTES
+   ============================================================ */
+.blog-feed {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.blog-post {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+.blog-post:first-child { padding-top: 0; }
+.blog-post:last-child { border-bottom: none; }
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.blog-version {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(240, 124, 26, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(240, 124, 26, 0.25);
+}
+.blog-meta time {
+  font-size: 0.88rem;
+  color: var(--text-mute);
+}
+.blog-post h2 {
+  font-size: 1.35rem;
+  margin: 0 0 14px;
+  border: none;
+  padding: 0;
+}
+.blog-post ul {
+  padding-left: 22px;
+  margin: 0;
+}
+.blog-post li {
+  color: var(--text-dim);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 5px;
+}
+
+/* ============================================================
    REVEAL ANIMATIONS
    ============================================================ */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
