@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SwipeTrack — Android Early Access</title>
+  <meta name="description" content="Sign up for SwipeTrack Android early access. Enter your email to join closed testing." />
+  <meta name="theme-color" content="#0d0a05" />
+  <link rel="icon" href="icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: #0d0a05;
+      color: #f4f5f8;
+      line-height: 1.55;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(240,124,26,0.15);
+      color: #f07c1a;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    p {
+      color: #a4a9b8;
+      margin: 0 0 32px;
+      font-size: 15px;
+    }
+    form { display: flex; flex-direction: column; gap: 14px; }
+    input[type="email"] {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: #f4f5f8;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="email"]::placeholder { color: #6b7184; }
+    input[type="email"]:focus { border-color: #f07c1a; }
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: #f07c1a;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button[type="submit"]:hover { background: #d96a10; }
+    .note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #6b7184;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #a4a9b8;
+      text-decoration: none;
+    }
+    .back:hover { color: #f4f5f8; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">Android Early Access</span>
+    <h1>Join the closed test</h1>
+    <p>SwipeTrack is now available on Android via early access. Enter your Google Play email and we'll add you to the testing group.</p>
+    <form action="https://formsubmit.co/support@swipetrack.run" method="POST">
+      <input type="hidden" name="_subject" value="Android Early Access Signup" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_next" value="https://swipetrack.run/android.html?thanks=1" />
+      <input type="email" name="email" placeholder="your.email@gmail.com" required />
+      <button type="submit">Request Access</button>
+    </form>
+    <p class="note">Use the same email linked to your Google Play account.</p>
+    <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
+  </div>
+  <script>
+    if (new URLSearchParams(window.location.search).has('thanks')) {
+      document.querySelector('.card').innerHTML =
+        '<span class="badge">Android Early Access</span>' +
+        '<h1>You\u2019re on the list!</h1>' +
+        '<p>We\u2019ll add you to the closed test shortly. Check your email for a Google Play invite.</p>' +
+        '<a class="back" href="index.html">&larr; Back to SwipeTrack</a>';
+    }
+  </script>
+</body>
+</html>

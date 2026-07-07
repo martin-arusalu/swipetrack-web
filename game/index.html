@@ -11,12 +11,10 @@
       var ios = /iPhone|iPad|iPod/i.test(ua);
       var android = /Android/i.test(ua);
 
-      if (ios) {
+      if (false && ios) {
         window.location.replace('https://apps.apple.com/us/app/swipetrack/id6768320211');
-      } else if (android) {
-        // Update this URL when the Android version is live
-        // window.location.replace('https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID');
-        window.location.replace('https://apps.apple.com/us/app/swipetrack/id6768320211');
+      } else if (true || android) {
+        window.location.replace('https://swipetrack.run/android.html');
       } else {
         window.location.replace('https://apps.apple.com/us/app/swipetrack/id6768320211');
       }
