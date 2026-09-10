@@ -9,7 +9,7 @@
   <link rel="icon" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -32,7 +32,7 @@
     <div class="container">
       <span class="eyebrow"><span class="dot"></span> Legal</span>
       <h1 class="gradient-text">Privacy Policy</h1>
-      <p class="updated">Last updated: 12 May 2026 · Effective immediately</p>
+      <p class="updated">Last updated: 10 September 2026 · Effective immediately</p>
     </div>
   </section>
 
@@ -54,53 +54,73 @@
     <article class="doc reveal">
 
       <h2 id="overview">1. Overview</h2>
-      <p>SwipeTrack ("we", "us", "the App") is a single-player track-running game published for iOS and Android. We respect your privacy and have designed the App to collect as little personal data as reasonably possible. This policy describes what we collect, why, and your choices.</p>
+      <p>SwipeTrack ("we", "us", the "App") is a track-running game and online leaderboard service for iOS and Android. This policy explains what information is processed when you play, use a SwipeTrack account, join leaderboards, enable notifications, link Sign in with Apple, visit our website, or contact support.</p>
 
       <h2 id="what-we-collect">2. Information we collect</h2>
 
-      <h3>2.1 Information stored only on your device</h3>
-      <p>The following data is stored locally on your device using standard platform storage (iOS preferences or Android shared preferences) and never leaves your device unless you explicitly export it or back it up via iCloud/Google backup (managed by the OS, not by us):</p>
+      <h3>2.1 Account and profile information</h3>
       <ul>
-        <li><strong>Gameplay records.</strong> Best times per race distance, lifetime distance run, all-time maximum speed, per-distance run counts.</li>
-        <li><strong>Progression state.</strong> Your level for each race distance and progression states (e.g. probation/thin-ice).</li>
-        <li><strong>Settings &amp; preferences.</strong> Audio, haptic, and display settings you have selected.</li>
+        <li><strong>Guest account.</strong> We automatically create a pseudonymous account and unique user ID so the service can save progression and operate leaderboards. You do not need to provide an email address or link Apple to play.</li>
+        <li><strong>Profile.</strong> Your chosen display name and runner appearance selections. Display names and leaderboard results are visible to other players.</li>
+        <li><strong>Optional Sign in with Apple.</strong> If you choose to link or restore an account, Apple and our authentication provider process your Apple account identifier, identity token, and any name or email address (including an Apple private-relay address) Apple makes available. Apple linking is used only for account access and recovery.</li>
       </ul>
 
-      <h3>2.2 Information processed by Apple and Google</h3>
-      <p>When you download or interact with SwipeTrack on the App Store or Google Play, Apple or Google may collect data subject to their own Privacy Policies. We do not control or have access to most of this data. If you opt in to crash reports and analytics sharing, Apple or Google may share aggregated, anonymized crash diagnostics with us.</p>
+      <h3>2.2 Gameplay and progression information</h3>
+      <p>We process race distance, time, placement, number of runners, average and maximum speed, race level, personal-best status, progression state, attribute XP, total distance and time, run counts, app version, and related timestamps. This information is linked to your SwipeTrack account and is used to save your game, validate results, calculate progression, and provide global leaderboards.</p>
 
-      <h3>2.3 Information you provide directly</h3>
-      <p>If you contact our support team via email, we receive your email address and the contents of your message. We use this only to respond to your enquiry.</p>
+      <h3>2.3 Notifications and device information</h3>
+      <p>If you allow push notifications, we process an Apple Push Notification service (APNs) device token, a randomly generated installation ID, notification environment, delivery status, and last-seen timestamps. We use this information to send service notifications such as leaderboard rank changes. You can disable notifications at any time in your device settings.</p>
 
-      <h3>2.4 Information we do <em>not</em> collect</h3>
+      <h3>2.4 Legacy PlayFab migration</h3>
+      <p>During our temporary migration from Microsoft PlayFab to Supabase, we process a PlayFab player ID, session ticket, existing profile/progression snapshot, leaderboard display name, and scores to verify ownership, migrate progress, preserve rankings, and prevent duplicate or deleted identities from reappearing. We may temporarily mirror leaderboard results and send shadow writes to PlayFab while we verify the transition.</p>
+
+      <h3>2.5 Local data, support, and technical information</h3>
       <ul>
-        <li>We do not collect your name, address, phone number, contacts, photos, location, microphone or camera data.</li>
+        <li><strong>On-device data.</strong> The App stores settings, cached gameplay state, account session credentials, migration state, and pending race submissions. On iOS, backend session credentials are stored in Keychain.</li>
+        <li><strong>Support.</strong> If you email us, we receive your email address and message contents, plus any device or account details you choose to include.</li>
+        <li><strong>Technical and usage data.</strong> Our hosting and service providers may automatically process IP address, request timestamps, app version, device model, operating-system and platform information, focused play time, and basic network/request metadata to deliver and secure the service, understand service use, and diagnose failures.</li>
+      </ul>
+
+      <h3>2.6 Information processed by platform providers</h3>
+      <p>Apple or Google may process downloads, purchases, crash reports, and store analytics under their own privacy policies. We do not control most platform-level processing. If you opt in to sharing diagnostics with Apple or Google, they may make diagnostic information available to us.</p>
+
+      <h3>2.7 Information we do <em>not</em> collect</h3>
+      <ul>
+        <li>We do not request your address, phone number, contacts, photos, precise location, microphone, camera, health, or fitness-sensor data.</li>
         <li>We do not use third-party advertising SDKs and we do not show advertisements in the App.</li>
         <li>We do not use behavioural tracking, fingerprinting, or the IDFA (Identifier for Advertisers).</li>
       </ul>
 
       <h2 id="how-we-use">3. How we use information</h2>
-      <p>The limited information we have access to is used solely to:</p>
+      <p>We use information to:</p>
       <ul>
-        <li>Operate gameplay features such as records, leaderboards (when added) and progression.</li>
+        <li>Create and authenticate accounts; synchronize saves; migrate existing progress; and restore an Apple-linked account.</li>
+        <li>Validate race results and operate progression, profiles, records, and global leaderboards.</li>
+        <li>Send notifications you have enabled, including leaderboard rank updates.</li>
+        <li>Protect the service, prevent abuse or duplicate migrations, troubleshoot failures, and maintain reliability.</li>
         <li>Diagnose crashes and improve stability via Apple-provided aggregate diagnostics.</li>
         <li>Respond to support requests you send us.</li>
       </ul>
       <p>We do not sell, rent, or trade any personal information, and we do not use your data for advertising or profiling.</p>
+      <p>Where applicable, we process information to provide the service you request, based on your consent for optional notifications or Apple linking, and for our legitimate interests in securing, maintaining, and improving the service. You may withdraw optional permissions without losing access to core guest gameplay.</p>
 
       <h2 id="sharing">4. Sharing of information</h2>
       <p>We share information only in the following limited circumstances:</p>
       <ul>
-        <li><strong>Apple, Inc. / Google LLC</strong> as the App Store and Google Play distributor and provider of crash analytics infrastructure.</li>
+        <li><strong>Supabase</strong> provides authentication, database, and Edge Function infrastructure for SwipeTrack accounts, progression, leaderboards, and notification delivery.</li>
+        <li><strong>Microsoft PlayFab</strong> temporarily processes legacy player, progression, leaderboard, and push data during the migration and verification window.</li>
+        <li><strong>Apple Inc.</strong> provides App Store distribution, Sign in with Apple, APNs delivery, and optional diagnostics. <strong>Google LLC</strong> provides Google Play distribution and optional diagnostics for Android.</li>
         <li><strong>Email service providers</strong> who deliver and store messages you send to our support address.</li>
         <li><strong>Legal compliance.</strong> Where required by law, court order, or to protect our rights or the safety of users.</li>
       </ul>
+      <p>Your display name, rank, and qualifying leaderboard score are public to other SwipeTrack players. We do not publicly display your email address, Apple identifier, APNs token, or internal account ID.</p>
 
       <h2 id="children">5. Children's privacy</h2>
-      <p>SwipeTrack is rated suitable for all ages and contains no chat, no in-app purchases targeted at children, and no advertising. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at the address below and we will delete it.</p>
+      <p>SwipeTrack is a general-audience game and is not directed specifically to children under 13. It contains no chat, targeted advertising, or in-app purchases targeted at children. We do not knowingly collect personal information from a child in violation of applicable law. If you are below the age at which you can consent to data processing where you live, use SwipeTrack only with permission from a parent or guardian. Contact us if you believe a child's information should be deleted.</p>
 
       <h2 id="retention">6. Data retention</h2>
-      <p>Locally-stored gameplay data persists until you delete the App or reset its data via iOS Settings. Support email correspondence is retained for up to 24 months and then deleted. Aggregated crash diagnostics are retained according to Apple's policies.</p>
+      <p>Account, profile, gameplay, and notification data is generally retained while your account remains active. You can permanently delete the active account from the in-app Profile screen. Deletion removes the Supabase account and associated profile, progression, race, leaderboard, device-token, and notification records; deletion of a mapped PlayFab player is queued during the migration period. A minimal pseudonymous legacy-identity tombstone may be retained to prevent deleted PlayFab data from being re-imported. Provider backups and security logs may persist for limited periods under provider retention schedules. Support emails are retained for up to 24 months unless a longer period is required for security or legal reasons.</p>
+      <p>Uninstalling removes ordinary local app data, but iOS Keychain credentials may survive reinstall so that the same guest account can be recovered on that device. Uninstalling alone does not delete server data. Use the in-app deletion control before uninstalling, or contact us for help.</p>
 
       <h2 id="rights">7. Your rights</h2>
       <p>Depending on where you live, you may have rights under laws such as the EU/UK General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), including:</p>
@@ -113,13 +133,13 @@
         <li>The right to <strong>withdraw consent</strong> at any time.</li>
         <li>The right to lodge a complaint with a supervisory authority.</li>
       </ul>
-      <p>You can exercise any of these rights by contacting us at <a href="mailto:privacy@swipetrack.run">privacy@swipetrack.run</a>. You can also delete all locally stored data at any time by uninstalling the App.</p>
+      <p>You can delete your active account in SwipeTrack under <strong>Profile → Delete account</strong>. You can also exercise applicable rights by contacting <a href="mailto:privacy@swipetrack.run">privacy@swipetrack.run</a>. We may ask for information needed to verify that a request relates to your account. If you linked Apple, deleting the SwipeTrack account does not automatically revoke Apple's authorization; you can remove SwipeTrack separately in iOS Settings under your Apple Account and Sign in with Apple.</p>
 
       <h2 id="security">8. Security</h2>
       <p>We use industry-standard technical and organisational measures to protect the limited information we process. No system, however, is 100% secure, and we cannot guarantee absolute security.</p>
 
       <h2 id="international">9. International data transfers</h2>
-      <p>Where data is processed outside your country of residence (for example, by Apple's servers), it is transferred under appropriate safeguards such as Apple's Standard Contractual Clauses. By using the App you consent to such transfers.</p>
+      <p>Our service providers may process information in countries other than your own. Where required, transfers are protected by contractual or other lawful safeguards offered by the relevant provider. Contact us if you would like more information about safeguards applicable to your data.</p>
 
       <h2 id="changes">10. Changes to this policy</h2>
       <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top will reflect the most recent change. Material changes will be communicated via the App or our website prior to taking effect.</p>

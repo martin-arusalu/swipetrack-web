@@ -9,7 +9,7 @@
   <link rel="icon" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -103,7 +103,7 @@
         <article class="feature-card">
           <span class="feature-icon">🔁</span>
           <h3>Reinstall the App</h3>
-          <p>If a problem persists, delete and reinstall SwipeTrack. <strong style="color:#fff;">Note:</strong> this will reset your local records and progression.</p>
+          <p>If a problem persists, first link Sign in with Apple from Profile and confirm synchronization, then reinstall. An Apple-linked account can restore progress. An unlinked guest may be recoverable on the same iPhone through Keychain, but this is not guaranteed across devices.</p>
         </article>
       </div>
     </div>
@@ -131,7 +131,7 @@
 
         <div class="faq-item">
           <button class="faq-q">My records or progression are gone after reinstalling.<span class="chev">+</span></button>
-          <div class="faq-a"><div class="faq-a-inner">SwipeTrack stores all progress locally on your device using iOS preference storage. Uninstalling the app removes that storage. iCloud-based save sync is on our roadmap.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Version 1.2.0 synchronizes progression with your SwipeTrack account. On the original iPhone, a guest account may survive reinstall through iOS Keychain. For reliable reinstall or cross-device recovery, open Profile and link Sign in with Apple before deleting the app, then use Restore with Apple after reinstalling.</div></div>
         </div>
 
         <div class="faq-item">
@@ -141,7 +141,7 @@
 
         <div class="faq-item">
           <button class="faq-q">Can I play offline?<span class="chev">+</span></button>
-          <div class="faq-a"><div class="faq-a-inner">Yes — all races, NPCs and progression work fully offline. An internet connection is only needed for the global leaderboard.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">An internet connection is required to initialize your account, synchronize authoritative progression, submit completed races, and load global leaderboards. If a submission is interrupted, SwipeTrack keeps the pending result and retries it before another race can begin.</div></div>
         </div>
 
         <div class="faq-item">
@@ -151,7 +151,17 @@
 
         <div class="faq-item">
           <button class="faq-q">How does the global leaderboard work?<span class="chev">+</span></button>
-          <div class="faq-a"><div class="faq-a-inner">Every race distance has its own global leaderboard. There are also leaderboards for top speed, maximum distance ran, and best average speed. Compete against runners worldwide.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Every race distance has its own global leaderboard, plus top speed, total distance, and best average speed boards. Your display name and qualifying result are visible to other players. If someone passes you in the rankings, you can opt in to a rank-update notification.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Do I need Sign in with Apple?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">No. SwipeTrack automatically creates a guest account, and all core features work without Apple linking. Linking Apple is optional and gives you reliable account recovery after reinstalling or moving to another iPhone.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">How do I change my name or runner colors?<span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Open Profile from the bottom navigation. You can choose a unique public display name and customize shirt, pants, shoes, skin, and hair colors. Your display name appears on global leaderboards.</div></div>
         </div>
 
         <div class="faq-item">
@@ -166,7 +176,7 @@
 
         <div class="faq-item">
           <button class="faq-q">How do I delete my data?<span class="chev">+</span></button>
-          <div class="faq-a"><div class="faq-a-inner">Because all gameplay data lives on your device, you can delete every byte of it by uninstalling the app. For email correspondence, write to <a href="mailto:privacy@swipetrack.run">privacy@swipetrack.run</a> and we'll erase your messages.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Open <strong>Profile → Delete account</strong> and confirm permanent deletion. This deletes the active server account and its gameplay data; during the PlayFab transition, deletion of mapped legacy data is also queued. Uninstalling alone does not delete server data. For help or support-email deletion, contact <a href="mailto:privacy@swipetrack.run">privacy@swipetrack.run</a>.</div></div>
         </div>
 
       </div>
