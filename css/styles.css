@@ -992,6 +992,12 @@ footer {
   border: none;
   padding: 0;
 }
+.blog-post h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 26px 0 10px;
+  color: var(--accent);
+}
 .blog-post ul {
   padding-left: 22px;
   margin: 0;
