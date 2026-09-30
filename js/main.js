@@ -51,15 +51,6 @@
     });
   });
 
-  // ---------- subtle parallax on hero phone ----------
-  const phone = document.querySelector('.phone');
-  if (phone && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.addEventListener('pointermove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 8;
-      const y = (e.clientY / window.innerHeight - 0.5) * 8;
-      phone.style.transform = `rotate(-5deg) rotateY(${8 + x}deg) rotateX(${-y}deg)`;
-    });
-  }
 
   // ---------- count-up stats ----------
   const counters = document.querySelectorAll('[data-count]');
@@ -83,6 +74,13 @@
     });
   }, { threshold: 0.4 });
   counters.forEach(c => cio.observe(c));
+
+  // ---------- hero video: respect reduced motion ----------
+  const heroVideo = document.querySelector('.hero video');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
 
   // ---------- year ----------
   const y = document.getElementById('year');

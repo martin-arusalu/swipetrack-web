@@ -6,13 +6,14 @@ Public marketing site for the SwipeTrack game, served at `https://swipetrack.run
 hosted as a static site from `main`). Plain HTML, CSS, and vanilla JS: no build step, no framework,
 no package manager.
 
-- `index.html`: landing page (features, screenshots, FAQ, App Store link).
+- `index.html`: landing page (hero video, how it plays, distances and stadiums, rankings, streak, FAQ, App Store link).
 - `android.html`: Android early-access landing page (Google Play).
 - `blog.html`: release notes, newest first. Each release is an `<article class="blog-post">` with
   a `blog-version` badge and `<time datetime="YYYY-MM-DD">`.
 - `privacy.html`, `terms.html`, `support.html`: legal and support pages.
 - `game/index.html`: a `/game` short link that redirects to the App Store or Play Store by user agent.
-- `css/styles.css`: the only stylesheet. `js/main.js`: nav, mobile menu, scroll reveal, FAQ.
+- `css/styles.css`: the only stylesheet; its tokens match the game's theme (runner repo `marketing/brand/`).
+  `js/main.js`: nav, mobile menu, scroll reveal, FAQ.
 
 ## SwipeTrack Workspace
 
@@ -35,8 +36,9 @@ no package manager.
 - Every page repeats the same `<header class="nav">` and footer. When you change navigation, update
   all pages.
 - Keep Open Graph and Twitter meta tags, and the canonical URL, on new pages.
-- Images are large PNGs in the root. Compress new ones before adding them. Don't commit more video
-  files (`record.mov` is already about 20 MB).
+- Page images are compressed WebP in `img/` (`img/shots` for screenshots, `img/stadiums`, `img/icons`,
+  `img/logo.svg`); compress new ones the same way. The hero video is `video/swipetrack-2.0.mov`
+  (480x1040 H.264, no audio, about 3.6 MB). Replace it rather than adding more videos, and keep it small.
 - To check changes, open the HTML file in a browser or run `python3 -m http.server` and view it at
   phone width.
 
