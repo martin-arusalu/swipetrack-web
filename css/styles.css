@@ -603,6 +603,7 @@ footer {
 .blog-post h3 { font-size: 1.05rem; font-weight: 800; margin: 26px 0 10px; color: var(--brand); }
 .blog-post ul { padding-left: 22px; margin: 0; }
 .blog-post li { color: var(--text-dim); font-size: 1rem; line-height: 1.7; margin-bottom: 5px; }
+.blog-post .blog-image { display: block; width: 100%; max-width: 520px; height: auto; border-radius: var(--radius-lg); margin: 18px 0 4px; }
 
 /* ============================================================
    REVEAL
