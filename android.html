@@ -58,35 +58,6 @@
       margin: 0 0 32px;
       font-size: 15px;
     }
-    form { display: flex; flex-direction: column; gap: 14px; }
-    input[type="email"] {
-      width: 100%;
-      padding: 14px 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-      color: #f4f5f8;
-      font-size: 16px;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    input[type="email"]::placeholder { color: #6b7184; }
-    input[type="email"]:focus { border-color: #f07c1a; }
-    button[type="submit"] {
-      width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      border: none;
-      background: #f07c1a;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    button[type="submit"]:hover { background: #d96a10; }
     .note {
       margin-top: 24px;
       font-size: 13px;
@@ -103,7 +74,6 @@
     .card.wide { max-width: 480px; text-align: left; }
     .card.wide .badge, .card.wide h1, .card.wide .lead { text-align: center; }
     .card.wide .badge { display: table; margin: 0 auto 20px; }
-    .optional { font-size: 13px; color: #6b7184; margin: -4px 0 0; text-align: left; }
     .steps { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 12px; counter-reset: step; }
     .steps li {
       counter-increment: step;
@@ -159,25 +129,10 @@
   </style>
 </head>
 <body>
-  <div class="card" id="card">
+  <div class="card wide" id="card">
     <span class="badge">Android Early Access</span>
     <h1>Get SwipeTrack on Android</h1>
-    <p class="lead">SwipeTrack is in early access on Android. Tap below and you can install it from Google Play in a couple of minutes, no waiting.</p>
-    <form id="signup" action="https://formsubmit.co/support@swipetrack.run" method="POST">
-      <input type="hidden" name="_subject" value="Android Early Access Signup" />
-      <input type="hidden" name="_captcha" value="true" />
-      <input type="hidden" name="_next" value="https://swipetrack.run/android.html?thanks=1" />
-      <input type="email" name="email" placeholder="your.email@gmail.com" />
-      <p class="optional">Optional: leave your email if you'd like to hear about updates.</p>
-      <button type="submit">Get Access</button>
-    </form>
-    <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
-  </div>
-
-  <template id="android-steps">
-    <span class="badge">Android Early Access</span>
-    <h1>You're in! Three quick steps</h1>
-    <p class="lead">Use the <strong>same Google account</strong> for all three steps: the one your Play Store uses.</p>
+    <p class="lead">SwipeTrack is in early access on Android. Three quick steps and you're racing. Use the <strong>same Google account</strong> for all three steps: the one your Play Store uses.</p>
     <ol class="steps">
       <li>
         <h2>Join the tester group</h2>
@@ -206,7 +161,7 @@
     </div>
     <p class="note">On iPhone? <a href="https://apps.apple.com/us/app/swipetrack/id6768320211">Get SwipeTrack on the App Store</a>.</p>
     <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
-  </template>
+  </div>
 
   <template id="ios">
     <span class="badge">iPhone</span>
@@ -218,37 +173,13 @@
   </template>
 
   <script>
-    (function () {
-      var ua = navigator.userAgent;
-      var isAndroid = /Android/i.test(ua);
-      var isIOS = !isAndroid && (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+    // iPhone and iPad visitors get the App Store link instead of the Android steps.
+    var ua = navigator.userAgent;
+    if (!/Android/i.test(ua) && (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
       var card = document.getElementById('card');
-
-      function show(id, wide) {
-        card.innerHTML = document.getElementById(id).innerHTML;
-        card.classList.toggle('wide', !!wide);
-        window.scrollTo(0, 0);
-      }
-
-      function showAccess() {
-        if (isIOS) show('ios');
-        else show('android-steps', true);
-      }
-
-      if (new URLSearchParams(window.location.search).has('thanks')) {
-        showAccess();
-        return;
-      }
-
-      // An email still goes to the existing signup inbox; without one, skip straight to the steps.
-      document.getElementById('signup').addEventListener('submit', function (e) {
-        if (!this.email.value.trim()) {
-          e.preventDefault();
-          history.replaceState(null, '', '?thanks=1');
-          showAccess();
-        }
-      });
-    })();
+      card.innerHTML = document.getElementById('ios').innerHTML;
+      card.classList.remove('wide');
+    }
   </script>
 </body>
 </html>
