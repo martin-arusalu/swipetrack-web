@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>SwipeTrack — Android Early Access</title>
-  <meta name="description" content="Sign up for SwipeTrack Android early access. Enter your email to join closed testing." />
+  <meta name="description" content="Get SwipeTrack on Android today. Join the early access test on Google Play in three quick steps." />
   <meta name="theme-color" content="#0d0a05" />
   <link rel="icon" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,31 +100,155 @@
       text-decoration: none;
     }
     .back:hover { color: #f4f5f8; }
+    .card.wide { max-width: 480px; text-align: left; }
+    .card.wide .badge, .card.wide h1, .card.wide .lead { text-align: center; }
+    .card.wide .badge { display: table; margin: 0 auto 20px; }
+    .optional { font-size: 13px; color: #6b7184; margin: -4px 0 0; text-align: left; }
+    .steps { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 12px; counter-reset: step; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 16px 16px 16px 60px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(240,124,26,0.15);
+      color: #f07c1a;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .steps h2 { font-size: 16px; font-weight: 600; margin: 4px 0 4px; }
+    .steps p { margin: 0 0 12px; font-size: 14px; }
+    .step-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: #f07c1a;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .step-btn:hover { background: #d96a10; }
+    .callout {
+      margin: 0 0 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #a4a9b8;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .callout strong { color: #f4f5f8; }
+    .callout ul { margin: 8px 0 0; padding-left: 20px; }
+    .callout a, .note a { color: #f07c1a; }
+    .card.wide .back { display: table; margin: 28px auto 0; }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="card" id="card">
     <span class="badge">Android Early Access</span>
-    <h1>Join the closed test</h1>
-    <p>SwipeTrack is now available on Android via early access. Enter your Google Play email and we'll add you to the testing group.</p>
-    <form action="https://formsubmit.co/support@swipetrack.run" method="POST">
+    <h1>Get SwipeTrack on Android</h1>
+    <p class="lead">SwipeTrack is in early access on Android. Tap below and you can install it from Google Play in a couple of minutes, no waiting.</p>
+    <form id="signup" action="https://formsubmit.co/support@swipetrack.run" method="POST">
       <input type="hidden" name="_subject" value="Android Early Access Signup" />
       <input type="hidden" name="_captcha" value="true" />
       <input type="hidden" name="_next" value="https://swipetrack.run/android.html?thanks=1" />
-      <input type="email" name="email" placeholder="your.email@gmail.com" required />
-      <button type="submit">Request Access</button>
+      <input type="email" name="email" placeholder="your.email@gmail.com" />
+      <p class="optional">Optional: leave your email if you'd like to hear about updates.</p>
+      <button type="submit">Get Access</button>
     </form>
-    <p class="note">Use the same email linked to your Google Play account.</p>
     <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
   </div>
+
+  <template id="android-steps">
+    <span class="badge">Android Early Access</span>
+    <h1>You're in! Three quick steps</h1>
+    <p class="lead">Use the <strong>same Google account</strong> for all three steps: the one your Play Store uses.</p>
+    <ol class="steps">
+      <li>
+        <h2>Join the tester group</h2>
+        <p>Open the group and tap "Join group".</p>
+        <a class="step-btn" href="https://groups.google.com/g/swipetrack-testers" target="_blank" rel="noopener">Join the group</a>
+      </li>
+      <li>
+        <h2>Accept the test invite</h2>
+        <p>Tap "Become a tester".</p>
+        <a class="step-btn" href="https://play.google.com/apps/testing/com.martinarusalu.swipetrack" target="_blank" rel="noopener">Become a tester</a>
+      </li>
+      <li>
+        <h2>Install from Google Play</h2>
+        <p>Download SwipeTrack and start racing.</p>
+        <a class="step-btn" href="https://play.google.com/store/apps/details?id=com.martinarusalu.swipetrack" target="_blank" rel="noopener">Open Google Play</a>
+      </li>
+    </ol>
+    <div class="callout"><strong>Play says the app isn't available?</strong> Access can take a few minutes to go through after step 2. Wait a bit and try step 3 again.</div>
+    <div class="callout">
+      <strong>Tell us how it runs.</strong> Email <a href="mailto:support@swipetrack.run?subject=Android%20feedback">support@swipetrack.run</a> with:
+      <ul>
+        <li>Your phone model</li>
+        <li>Whether races feel smooth or choppy</li>
+        <li>Any bugs, with screenshots</li>
+      </ul>
+    </div>
+    <p class="note">On iPhone? <a href="https://apps.apple.com/us/app/swipetrack/id6768320211">Get SwipeTrack on the App Store</a>.</p>
+    <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
+  </template>
+
+  <template id="ios">
+    <span class="badge">iPhone</span>
+    <h1>SwipeTrack is on the App Store</h1>
+    <p>No early access needed on iPhone. Download it now and start racing.</p>
+    <a class="step-btn" href="https://apps.apple.com/us/app/swipetrack/id6768320211">Download on the App Store</a>
+    <br />
+    <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
+  </template>
+
   <script>
-    if (new URLSearchParams(window.location.search).has('thanks')) {
-      document.querySelector('.card').innerHTML =
-        '<span class="badge">Android Early Access</span>' +
-        '<h1>You\u2019re on the list!</h1>' +
-        '<p>We\u2019ll add you to the closed test shortly. Check your email for a Google Play invite.</p>' +
-        '<a class="back" href="index.html">&larr; Back to SwipeTrack</a>';
-    }
+    (function () {
+      var ua = navigator.userAgent;
+      var isAndroid = /Android/i.test(ua);
+      var isIOS = !isAndroid && (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+      var card = document.getElementById('card');
+
+      function show(id, wide) {
+        card.innerHTML = document.getElementById(id).innerHTML;
+        card.classList.toggle('wide', !!wide);
+        window.scrollTo(0, 0);
+      }
+
+      function showAccess() {
+        if (isIOS) show('ios');
+        else show('android-steps', true);
+      }
+
+      if (new URLSearchParams(window.location.search).has('thanks')) {
+        showAccess();
+        return;
+      }
+
+      // An email still goes to the existing signup inbox; without one, skip straight to the steps.
+      document.getElementById('signup').addEventListener('submit', function (e) {
+        if (!this.email.value.trim()) {
+          e.preventDefault();
+          history.replaceState(null, '', '?thanks=1');
+          showAccess();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
