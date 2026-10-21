@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SwipeTrack: You scanned the shirt</title>
+  <meta name="description" content="Still behind me? Race 100m to 10,000m on your phone with SwipeTrack." />
+  <meta name="theme-color" content="#0E0B08" />
+  <link rel="icon" href="/icon.png" />
+  <link rel="canonical" href="https://swipetrack.run/shirt/" />
+  <meta property="og:title" content="SwipeTrack: Still behind me?" />
+  <meta property="og:description" content="Race 100m to 10,000m on your phone. Two fingers, eight distances, your PB." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swipetrack.run/shirt/" />
+  <meta property="og:image" content="https://swipetrack.run/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="SwipeTrack" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SwipeTrack: Still behind me?" />
+  <meta name="twitter:description" content="Race 100m to 10,000m on your phone. Two fingers, eight distances, your PB." />
+  <meta name="twitter:image" content="https://swipetrack.run/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root { --ground: #0E0B08; --card: #15191F; --line: #2C333C; --text: #F6F8FA; --text-dim: #A4B0BC; --brand: #F88E14; --on-accent: #18110A; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--ground);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card { width: 100%; max-width: 440px; text-align: center; }
+    .logo { width: 220px; max-width: 70%; margin: 0 auto 36px; display: block; }
+    .badge {
+      display: inline-block;
+      color: var(--brand);
+      background: rgba(248, 142, 20, 0.14);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(36px, 10vw, 48px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      font-style: italic;
+      margin: 0 0 18px;
+    }
+    h1 span { color: var(--brand); }
+    .lead { color: var(--text-dim); font-size: 17px; margin: 0 0 32px; }
+    .buttons { display: flex; flex-direction: column; gap: 12px; }
+    .btn {
+      display: block;
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--line);
+      transition: transform 120ms ease, background 200ms ease;
+    }
+    .btn.primary { background: var(--brand); color: var(--on-accent); border-color: var(--brand); }
+    .btn:active { transform: scale(0.96); }
+    .story { margin: 36px 0 0; font-size: 14px; color: var(--text-dim); }
+    .story strong { color: var(--text); }
+    .back { display: inline-block; margin-top: 24px; font-size: 14px; color: var(--text-dim); text-decoration: none; }
+    .back:hover { color: var(--text); }
+    .rise { opacity: 0; transform: translateY(12px); animation: rise 280ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .rise:nth-child(2) { animation-delay: 60ms; }
+    .rise:nth-child(3) { animation-delay: 120ms; }
+    .rise:nth-child(4) { animation-delay: 180ms; }
+    .rise:nth-child(5) { animation-delay: 240ms; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="logo rise" src="/img/logo.svg" alt="SwipeTrack" />
+    <div class="rise"><span class="badge">You scanned the shirt</span></div>
+    <h1 class="rise">Still behind me?<br /><span>Race me here.</span></h1>
+    <p class="lead rise">SwipeTrack is a running game for your phone. Swipe two fingers to race real distances, from 100&nbsp;m to 10&nbsp;km, against runners from around the world.</p>
+    <div class="buttons rise" id="buttons">
+      <a class="btn" id="ios" href="https://apps.apple.com/us/app/swipetrack/id6768320211">Get it on the App Store</a>
+      <a class="btn" id="android" href="/android.html">Get it on Android</a>
+    </div>
+    <p class="story">I built SwipeTrack the summer I was injured and couldn't run. Now I race on the track and in the app.</p>
+    <a class="back" href="/">More about SwipeTrack &rarr;</a>
+  </main>
+  <script>
+    // Put the visitor's own store first and make it the main button.
+    var ua = navigator.userAgent;
+    var android = /Android/i.test(ua);
+    var first = document.getElementById(android ? 'android' : 'ios');
+    first.classList.add('primary');
+    document.getElementById('buttons').prepend(first);
+  </script>
+</body>
+</html>
