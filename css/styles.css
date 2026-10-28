@@ -367,7 +367,17 @@ section { position: relative; z-index: 2; padding: 112px 0; }
 }
 .stadium figcaption b { display: block; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
 .stadium figcaption span { font-size: 0.9rem; color: var(--text-dim); }
-@media (max-width: 900px) { .stadiums { grid-template-columns: repeat(2, 1fr); } }
+.stadium.wide { grid-column: span 2; aspect-ratio: auto; }
+.stadium.wide img { position: absolute; inset: 0; }
+.stadium-new {
+  display: inline-block; margin-bottom: 6px; padding: 3px 10px; border-radius: 100px;
+  background: var(--brand); color: var(--on-accent) !important;
+  font-size: 0.75rem !important; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  .stadiums { grid-template-columns: repeat(2, 1fr); }
+  .stadium.wide { aspect-ratio: 3 / 2; }
+}
 
 /* ============================================================
    SPLIT (results, rankings, streak)
