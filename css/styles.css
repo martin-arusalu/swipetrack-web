@@ -241,6 +241,11 @@ section { position: relative; z-index: 2; padding: 112px 0; }
    ============================================================ */
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .app-badge img { height: 56px; width: auto; }
+/* Keep the App Store and Google Play badges side by side on phones. */
+@media (max-width: 420px) {
+  .hero-cta:has(.app-badge) { gap: 10px; flex-wrap: nowrap; }
+  .app-badge img { height: 44px; }
+}
 
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
