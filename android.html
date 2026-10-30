@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>SwipeTrack — Android Early Access</title>
-  <meta name="description" content="Get SwipeTrack on Android today. Join the early access test on Google Play in three quick steps." />
+  <title>SwipeTrack for Android</title>
+  <meta name="description" content="Get SwipeTrack on Android. Race 100m to 10,000m: download it free on Google Play." />
   <meta name="theme-color" content="#0d0a05" />
   <link rel="icon" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,6 +71,8 @@
       text-decoration: none;
     }
     .back:hover { color: #f4f5f8; }
+    .play-badge { display: inline-block; }
+    .play-badge img { display: block; height: 56px; width: auto; }
     .card.wide { max-width: 480px; text-align: left; }
     .card.wide .badge, .card.wide h1, .card.wide .lead { text-align: center; }
     .card.wide .badge { display: table; margin: 0 auto 20px; }
@@ -129,36 +131,13 @@
   </style>
 </head>
 <body>
-  <div class="card wide" id="card">
-    <span class="badge">Android Early Access</span>
-    <h1>Get SwipeTrack on Android</h1>
-    <p class="lead">SwipeTrack is in early access on Android. Three quick steps and you're racing. Use the <strong>same Google account</strong> for all three steps: the one your Play Store uses.</p>
-    <ol class="steps">
-      <li>
-        <h2>Join the tester group</h2>
-        <p>Open the group and tap "Join group".</p>
-        <a class="step-btn" href="https://groups.google.com/g/swipetrack-testers" target="_blank" rel="noopener">Join the group</a>
-      </li>
-      <li>
-        <h2>Accept the test invite</h2>
-        <p>Tap "Become a tester".</p>
-        <a class="step-btn" href="https://play.google.com/apps/testing/com.martinarusalu.swipetrack" target="_blank" rel="noopener">Become a tester</a>
-      </li>
-      <li>
-        <h2>Install from Google Play</h2>
-        <p>Download SwipeTrack and start racing.</p>
-        <a class="step-btn" href="https://play.google.com/store/apps/details?id=com.martinarusalu.swipetrack" target="_blank" rel="noopener">Open Google Play</a>
-      </li>
-    </ol>
-    <div class="callout"><strong>Play says the app isn't available?</strong> Access can take a few minutes to go through after step 2. Wait a bit and try step 3 again.</div>
-    <div class="callout">
-      <strong>Tell us how it runs.</strong> Email <a href="mailto:support@swipetrack.run?subject=Android%20feedback">support@swipetrack.run</a> with:
-      <ul>
-        <li>Your phone model</li>
-        <li>Whether races feel smooth or choppy</li>
-        <li>Any bugs, with screenshots</li>
-      </ul>
-    </div>
+  <div class="card" id="card">
+    <span class="badge">Android</span>
+    <h1>SwipeTrack is on Google Play</h1>
+    <p>Race 100m to 10,000m on any phone with Android 7.1 or newer. No tester sign-up needed any more: install it and start racing.</p>
+    <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.martinarusalu.swipetrack" target="_blank" rel="noopener">
+      <img src="img/google-play-badge.webp" alt="Get it on Google Play" width="188" height="56" />
+    </a>
     <p class="note">On iPhone? <a href="https://apps.apple.com/us/app/swipetrack/id6768320211">Get SwipeTrack on the App Store</a>.</p>
     <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
   </div>
@@ -166,14 +145,14 @@
   <template id="ios">
     <span class="badge">iPhone</span>
     <h1>SwipeTrack is on the App Store</h1>
-    <p>No early access needed on iPhone. Download it now and start racing.</p>
+    <p>Download it now and start racing.</p>
     <a class="step-btn" href="https://apps.apple.com/us/app/swipetrack/id6768320211">Download on the App Store</a>
     <br />
     <a class="back" href="index.html">&larr; Back to SwipeTrack</a>
   </template>
 
   <script>
-    // iPhone and iPad visitors get the App Store link instead of the Android steps.
+    // iPhone and iPad visitors get the App Store link instead.
     var ua = navigator.userAgent;
     if (!/Android/i.test(ua) && (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
       var card = document.getElementById('card');
