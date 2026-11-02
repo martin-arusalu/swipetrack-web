@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Beat my time in SwipeTrack</title>
+  <meta name="description" content="A friend dares you to beat their time in SwipeTrack. Race 100m to 10,000m on your phone." />
+  <meta name="theme-color" content="#0E0B08" />
+  <link rel="icon" href="/icon.png" />
+  <link rel="canonical" href="https://swipetrack.run/beat/" />
+  <meta property="og:title" content="Beat my time in SwipeTrack" />
+  <meta property="og:description" content="Race me in SwipeTrack: swipe two fingers to run 100m to 10,000m on your phone." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swipetrack.run/beat/" />
+  <meta property="og:image" content="https://swipetrack.run/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="SwipeTrack" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Beat my time in SwipeTrack" />
+  <meta name="twitter:description" content="Race me in SwipeTrack: swipe two fingers to run 100m to 10,000m on your phone." />
+  <meta name="twitter:image" content="https://swipetrack.run/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root { --ground: #0E0B08; --card: #15191F; --line: #2C333C; --text: #F6F8FA; --text-dim: #A4B0BC; --brand: #F88E14; --brand-hover: #FFB25C; --on-accent: #18110A; --accent: var(--brand); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--ground);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card { width: 100%; max-width: 440px; text-align: center; }
+    .logo { width: 220px; max-width: 70%; margin: 0 auto 36px; display: block; }
+    .badge {
+      display: inline-block;
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(32px, 9vw, 44px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      font-style: italic;
+      margin: 0 0 18px;
+      overflow-wrap: anywhere;
+    }
+    h1 .time { color: var(--accent); white-space: nowrap; }
+    .lead { color: var(--text-dim); font-size: 17px; margin: 0 0 28px; }
+    .open {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 64px;
+      margin: 0 0 20px;
+      border-radius: 20px;
+      background: var(--brand);
+      color: var(--on-accent);
+      font-size: 20px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+    .open:hover { background: var(--brand-hover); }
+    .open:active { transform: scale(0.96); }
+    .open svg { width: 22px; height: 22px; }
+    .hint { color: var(--text-dim); font-size: 14px; margin: 0 0 14px; }
+    .buttons { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .app-badge { display: inline-block; line-height: 0; transition: transform 120ms ease; }
+    .app-badge img { height: 56px; width: auto; }
+    .app-badge:active { transform: scale(0.96); }
+    /* Keep both store badges side by side on phones, same as the main page. */
+    @media (max-width: 420px) { .buttons { gap: 10px; flex-wrap: nowrap; } .app-badge img { height: 44px; } }
+    .back { display: inline-block; margin-top: 28px; font-size: 14px; color: var(--text-dim); text-decoration: none; }
+    .back:hover { color: var(--text); }
+    .hidden { display: none; }
+    .rise { opacity: 0; transform: translateY(12px); animation: rise 280ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .rise:nth-child(2) { animation-delay: 60ms; }
+    .rise:nth-child(3) { animation-delay: 120ms; }
+    .rise:nth-child(4) { animation-delay: 180ms; }
+    .rise:nth-child(5) { animation-delay: 240ms; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; transform: none; } }
+  </style>
+  <script src="/js/analytics.js"></script>
+</head>
+<body>
+  <main class="card">
+    <img class="logo rise" src="/img/logo.svg" alt="SwipeTrack" />
+    <div class="rise"><span class="badge" id="badge">Race challenge</span></div>
+    <h1 class="rise" id="title">Race me in SwipeTrack</h1>
+    <p class="lead rise" id="lead">SwipeTrack is a running game for your phone. Swipe two fingers to race real distances, from 100&nbsp;m to 10&nbsp;km, against runners from around the world.</p>
+    <div class="rise">
+      <a class="open hidden" id="open" href="swipetrack://">
+        Open in SwipeTrack
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg>
+      </a>
+      <p class="hint hidden" id="hint">No SwipeTrack yet? It's free:</p>
+      <div class="buttons" id="buttons">
+        <a class="app-badge" id="ios" href="https://apps.apple.com/app/id6768320211?ct=share-beat">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="168" height="56" />
+        </a>
+        <a class="app-badge" id="android" href="https://play.google.com/store/apps/details?id=com.martinarusalu.swipetrack&amp;referrer=utm_source%3Dshare%26utm_campaign%3Dbeat">
+          <img src="/img/google-play-badge.webp" alt="Get it on Google Play" width="188" height="56" />
+        </a>
+      </div>
+    </div>
+    <a class="back" href="/">More about SwipeTrack &rarr;</a>
+  </main>
+  <script>
+    // A shared race from the game: /beat/?d=800&t=14844&n=Name, d in metres, t in centiseconds.
+    // Everything read from the link is checked here and written with textContent only.
+    (function () {
+      var DISTANCES = { 100: '#FFAA63', 200: '#FF9170', 400: '#EF8D9D', 800: '#BFD37D', 1500: '#82D7A5', 3000: '#6FD1C6', 5000: '#72C0E4', 10000: '#9FAEF3' };
+      var params = new URLSearchParams(window.location.search);
+      var d = params.get('d') || '';
+      var t = params.get('t') || '';
+      var meters = /^\d{1,5}$/.test(d) ? parseInt(d, 10) : 0;
+      var centis = /^\d{1,9}$/.test(t) ? parseInt(t, 10) : 0;
+
+      // Put the visitor's own store first.
+      if (/Android/i.test(navigator.userAgent)) {
+        document.getElementById('buttons').prepend(document.getElementById('android'));
+      }
+      if (!DISTANCES[meters] || centis <= 0) return;
+
+      var name = cleanName(params.get('n'));
+      var time = timeLabel(centis);
+      var distance = meters >= 3000 ? (meters / 1000) + 'k' : meters + 'm';
+      document.documentElement.style.setProperty('--accent', DISTANCES[meters]);
+
+      var title = document.getElementById('title');
+      title.textContent = (name || 'A friend') + ' dares you to beat ';
+      var timeSpan = document.createElement('span');
+      timeSpan.className = 'time';
+      timeSpan.textContent = time;
+      title.appendChild(timeSpan);
+      title.appendChild(document.createTextNode(' on the ' + distance));
+      document.getElementById('badge').textContent = distance + ' challenge';
+      document.getElementById('lead').textContent =
+        'Swipe two fingers to run in SwipeTrack. Race the ' + distance + ' and see if you can go faster.';
+      document.title = (name || 'A friend') + ' dares you to beat ' + time + ' on the ' + distance;
+
+      var link = 'swipetrack://beat?d=' + meters + '&t=' + centis + (name ? '&n=' + encodeURIComponent(name) : '');
+      var open = document.getElementById('open');
+      open.href = link;
+      open.classList.remove('hidden');
+      document.getElementById('hint').classList.remove('hidden');
+
+      // Like the game: trimmed, no control characters, at most 24 characters.
+      function cleanName(value) {
+        if (!value) return '';
+        var chars = Array.from(value.replace(/[\u0000-\u001F\u007F-\u009F]/g, '').trim());
+        return chars.slice(0, 24).join('').trim();
+      }
+
+      // "47.86" under a minute, "2:28.44" from a minute up, like every screen in the game.
+      function timeLabel(cs) {
+        var seconds = Math.floor(cs / 100);
+        var hundredths = String(cs % 100).padStart(2, '0');
+        if (seconds < 60) return seconds + '.' + hundredths;
+        return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0') + '.' + hundredths;
+      }
+    })();
+  </script>
+</body>
+</html>
