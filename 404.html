@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beat my time in SwipeTrack</title>
+  <meta name="theme-color" content="#0E0B08" />
+  <meta property="og:title" content="Beat my time in SwipeTrack" />
+  <meta property="og:image" content="https://swipetrack.run/og.png" />
+  <script>
+    // GitHub Pages serves this for any unknown path. /b/{name}/{distance} is a shared race link:
+    // hand it to the beat page, which puts the short address back in the bar.
+    (function () {
+      var match = /^\/b\/([^/]+)\/(\d+)\/?$/.exec(window.location.pathname);
+      if (match) window.location.replace('/beat/?name=' + match[1] + '&d=' + match[2]);
+    })();
+  </script>
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0E0B08; color: #F6F8FA; font-family: system-ui, sans-serif; text-align: center; }
+    a { color: #F88E14; }
+  </style>
+</head>
+<body>
+  <p>Page not found. <a href="/">Back to SwipeTrack</a></p>
+</body>
+</html>

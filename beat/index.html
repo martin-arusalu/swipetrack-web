@@ -126,9 +126,10 @@
     <a class="back" href="/">More about SwipeTrack &rarr;</a>
   </main>
   <script>
-    // A shared race from the game: /beat/?d=800&t=14844&n=Name, d in metres, t in centiseconds.
+    // A shared race from the game: /b/Name/800, or /beat/?d=800&t=14844&n=Name with t in centiseconds.
     // Everything read from the link is checked here and written with textContent only.
     (function () {
+      var API = 'https://dnodkkhbjalucwvmwhar.supabase.co/functions/v1';
       var DISTANCES = { 100: '#FFAA63', 200: '#FF9170', 400: '#EF8D9D', 800: '#BFD37D', 1500: '#82D7A5', 3000: '#6FD1C6', 5000: '#72C0E4', 10000: '#9FAEF3' };
       var params = new URLSearchParams(window.location.search);
       var d = params.get('d') || '';
@@ -140,30 +141,62 @@
       if (/Android/i.test(navigator.userAgent)) {
         document.getElementById('buttons').prepend(document.getElementById('android'));
       }
-      if (!DISTANCES[meters] || centis <= 0) return;
+      if (!DISTANCES[meters]) return;
 
+      // /b/{name}/{distance} (through 404.html): the dare is that player's current PB.
+      var target = params.get('name');
+      if (target !== null) {
+        if (!/^[A-Za-z0-9_][A-Za-z0-9 _-]{2,19}$/.test(target)) return;
+        var path = encodeURIComponent(target) + '/' + meters;
+        history.replaceState(null, '', '/b/' + path);
+        setOpen('swipetrack://b/' + path);
+        setAccent();
+        document.getElementById('title').textContent = 'Race ' + target + ' on the ' + distanceLabel();
+        fetch(API + '/beat-target?name=' + encodeURIComponent(target) + '&distance=' + meters)
+          .then(function (response) { return response.ok ? response.json() : null; })
+          .then(function (body) {
+            if (body && body.target && body.target.timeMs > 0) {
+              showDare(cleanName(body.target.displayName), timeLabel(Math.round(body.target.timeMs / 10)));
+            }
+          })
+          .catch(function () {});
+        return;
+      }
+
+      if (centis <= 0) return;
       var name = cleanName(params.get('n'));
-      var time = timeLabel(centis);
-      var distance = meters >= 3000 ? (meters / 1000) + 'k' : meters + 'm';
-      document.documentElement.style.setProperty('--accent', DISTANCES[meters]);
+      setAccent();
+      showDare(name, timeLabel(centis));
+      setOpen('swipetrack://beat?d=' + meters + '&t=' + centis + (name ? '&n=' + encodeURIComponent(name) : ''));
 
-      var title = document.getElementById('title');
-      title.textContent = (name || 'A friend') + ' dares you to beat ';
-      var timeSpan = document.createElement('span');
-      timeSpan.className = 'time';
-      timeSpan.textContent = time;
-      title.appendChild(timeSpan);
-      title.appendChild(document.createTextNode(' on the ' + distance));
-      document.getElementById('badge').textContent = distance + ' challenge';
-      document.getElementById('lead').textContent =
-        'Swipe two fingers to run in SwipeTrack. Race the ' + distance + ' and see if you can go faster.';
-      document.title = (name || 'A friend') + ' dares you to beat ' + time + ' on the ' + distance;
+      function distanceLabel() {
+        return meters >= 3000 ? (meters / 1000) + 'k' : meters + 'm';
+      }
 
-      var link = 'swipetrack://beat?d=' + meters + '&t=' + centis + (name ? '&n=' + encodeURIComponent(name) : '');
-      var open = document.getElementById('open');
-      open.href = link;
-      open.classList.remove('hidden');
-      document.getElementById('hint').classList.remove('hidden');
+      function setAccent() {
+        document.documentElement.style.setProperty('--accent', DISTANCES[meters]);
+        document.getElementById('badge').textContent = distanceLabel() + ' challenge';
+        document.getElementById('lead').textContent =
+          'Swipe two fingers to run in SwipeTrack. Race the ' + distanceLabel() + ' and see if you can go faster.';
+      }
+
+      function showDare(who, time) {
+        var title = document.getElementById('title');
+        title.textContent = (who || 'A friend') + ' dares you to beat ';
+        var timeSpan = document.createElement('span');
+        timeSpan.className = 'time';
+        timeSpan.textContent = time;
+        title.appendChild(timeSpan);
+        title.appendChild(document.createTextNode(' on the ' + distanceLabel()));
+        document.title = (who || 'A friend') + ' dares you to beat ' + time + ' on the ' + distanceLabel();
+      }
+
+      function setOpen(link) {
+        var open = document.getElementById('open');
+        open.href = link;
+        open.classList.remove('hidden');
+        document.getElementById('hint').classList.remove('hidden');
+      }
 
       // Like the game: trimmed, no control characters, at most 24 characters.
       function cleanName(value) {
