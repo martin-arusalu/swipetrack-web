@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swipetrack.run/sitemap.xml

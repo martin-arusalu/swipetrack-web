@@ -8,8 +8,15 @@ no package manager.
 
 - `index.html`: landing page (hero video, how it plays, distances and stadiums, rankings, streak, FAQ, App Store link).
 - `android.html`: Android early-access landing page (Google Play).
-- `blog.html`: release notes, newest first. Each release is an `<article class="blog-post">` with
-  a `blog-version` badge and `<time datetime="YYYY-MM-DD">`.
+- `blog.html`: release notes index, newest first. Each entry is a short `<article class="blog-post blog-item">`
+  (version badge, date, linked title, intro paragraph) linking to the post's own page. A small script
+  redirects old `blog.html#v2-3-0` style anchors to the post page.
+- `blog/vX-Y-Z/index.html`: one page per release (version dots become dashes). Each has its own
+  `<title>`, meta description, canonical, Open Graph/Twitter tags, `BlogPosting` JSON-LD, and links to
+  the newer and older posts. Pages in subfolders use root-absolute paths (`/css/styles.css`).
+- `img/og/vX-Y-Z.jpg`: 1200x630 share image per post (logo, version and title on the left, the
+  post's stadium on the right).
+- `sitemap.xml`, `robots.txt`: list every page, including each blog post.
 - `privacy.html`, `terms.html`, `support.html`: legal and support pages.
 - `game/index.html`: a `/game` short link that redirects to the App Store or Play Store by user agent.
 - `css/styles.css`: the only stylesheet; its tokens match the game's theme (runner repo `marketing/brand/`).
@@ -26,7 +33,9 @@ no package manager.
 ## Content Rules
 
 - Add a blog post for every game release, written for players, and match the version number to the
-  game's `bundleVersion`.
+  game's `bundleVersion`. A new post means: copy the latest `blog/vX-Y-Z/` page and its share image,
+  add an entry at the top of `blog.html`, point the previous post's "Newer" card at it, add it to
+  `sitemap.xml`, and update the landing page's "New in" link.
 - The App Store listing links to the legal and support pages, so keep their URLs stable. The privacy
   policy must match what the game and API actually collect (Supabase auth, Apple/Google sign-in,
   APNs tokens, race data).

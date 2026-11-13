@@ -4,29 +4,57 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Blog &amp; Release Notes — SwipeTrack</title>
-  <meta name="description" content="SwipeTrack 2.0.2 adds race splits every 100m, a last-lap bell buzz and rival names in rank alerts. 2.0.1 added the six-lane Mountain Stadium for levels 20–29. 2.0 brought a completely new look, the City Stadium, daily streaks, a new race HUD and a new results screen." />
+  <meta name="description" content="SwipeTrack release notes and news. Latest: 2.3.0, Desert Stadium and national records. Every update to the swipe-to-run track game, newest first." />
   <meta name="theme-color" content="#0E0B08" />
-  <link rel="icon" href="icon.png" />
+  <link rel="icon" href="/icon.png" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+  <link rel="canonical" href="https://swipetrack.run/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SwipeTrack Blog &amp; Release Notes" />
+  <meta property="og:description" content="SwipeTrack release notes and news. Latest: 2.3.0, Desert Stadium and national records. Every update to the swipe-to-run track game, newest first." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swipetrack.run/blog.html" />
+  <meta property="og:image" content="https://swipetrack.run/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="SwipeTrack" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SwipeTrack Blog &amp; Release Notes" />
+  <meta name="twitter:description" content="SwipeTrack release notes and news. Latest: 2.3.0, Desert Stadium and national records. Every update to the swipe-to-run track game, newest first." />
+  <meta name="twitter:image" content="https://swipetrack.run/og.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/analytics.js"></script>
+  <script>
+    // Old links to a post on this page (blog.html#v2-3-0, #v2.3.0 or #2.3.0) go to the post's own page.
+    (function () {
+      var m = /^#v?(\d+)[.-](\d+)[.-](\d+)$/.exec(window.location.hash);
+      if (m) window.location.replace('/blog/v' + m[1] + '-' + m[2] + '-' + m[3] + '/');
+    })();
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Blog", "name": "SwipeTrack Blog & Release Notes", "url": "https://swipetrack.run/blog.html", "blogPost": [{"@type": "BlogPosting", "headline": "Desert Stadium and national records", "datePublished": "2026-11-13", "url": "https://swipetrack.run/blog/v2-3-0/"}, {"@type": "BlogPosting", "headline": "National Stadium: race under the big screens", "datePublished": "2026-11-09", "url": "https://swipetrack.run/blog/v2-2-0/"}, {"@type": "BlogPosting", "headline": "Glacier Stadium: racing through the snow", "datePublished": "2026-10-28", "url": "https://swipetrack.run/blog/v2-1-0/"}, {"@type": "BlogPosting", "headline": "Canyon Stadium: eight lanes, seven rivals", "datePublished": "2026-10-23", "url": "https://swipetrack.run/blog/v2-0-4/"}, {"@type": "BlogPosting", "headline": "Coastal Stadium: race by the sea", "datePublished": "2026-10-12", "url": "https://swipetrack.run/blog/v2-0-3/"}, {"@type": "BlogPosting", "headline": "Splits every 100m and a bell for the last lap", "datePublished": "2026-10-07", "url": "https://swipetrack.run/blog/v2-0-2/"}, {"@type": "BlogPosting", "headline": "Mountain Stadium: race below the peaks", "datePublished": "2026-10-03", "url": "https://swipetrack.run/blog/v2-0-1/"}, {"@type": "BlogPosting", "headline": "SwipeTrack 2.0: a whole new look, City Stadium & daily streaks", "datePublished": "2026-09-30", "url": "https://swipetrack.run/blog/v2-0-0/"}, {"@type": "BlogPosting", "headline": "A new race menu, a live runner preview & fresh outfit colors", "datePublished": "2026-09-24", "url": "https://swipetrack.run/blog/v1-3-2/"}, {"@type": "BlogPosting", "headline": "Into the forest: a new stadium and sharper racing", "datePublished": "2026-09-22", "url": "https://swipetrack.run/blog/v1-3-1/"}, {"@type": "BlogPosting", "headline": "Female runner, a brand-new animation system & the pain of the final lap", "datePublished": "2026-09-18", "url": "https://swipetrack.run/blog/v1-3-0/"}, {"@type": "BlogPosting", "headline": "Cloud saves, runner profiles & smarter leaderboards", "datePublished": "2026-09-10", "url": "https://swipetrack.run/blog/v1-2-0/"}, {"@type": "BlogPosting", "headline": "Performance & landscape mode", "datePublished": "2026-05-27", "url": "https://swipetrack.run/blog/v1-1-1/"}, {"@type": "BlogPosting", "headline": "3000m, stadium tribunes & progression overhaul", "datePublished": "2026-05-23", "url": "https://swipetrack.run/blog/v1-1-0/"}, {"@type": "BlogPosting", "headline": "Stability update", "datePublished": "2026-05-14", "url": "https://swipetrack.run/blog/v1-0-2/"}, {"@type": "BlogPosting", "headline": "Launch day polish", "datePublished": "2026-05-14", "url": "https://swipetrack.run/blog/v1-0-1/"}]}
+  </script>
 </head>
 <body>
 
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html" aria-label="SwipeTrack home">
-        <img src="img/logo.svg" width="168" height="42" class="brand-logo" alt="SwipeTrack" />
+      <a class="brand" href="/" aria-label="SwipeTrack home">
+        <img src="/img/logo.svg" width="168" height="42" class="brand-logo" alt="SwipeTrack" />
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html#play">How it plays</a>
-        <a href="index.html#distances">Distances</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="support.html">Support</a>
-        <a href="game/" class="nav-cta">Get the app</a>
+        <a href="/index.html#play">How it plays</a>
+        <a href="/index.html#distances">Distances</a>
+        <a href="/index.html#faq">FAQ</a>
+        <a href="/blog.html" class="active">Blog</a>
+        <a href="/support.html">Support</a>
+        <a href="/game/" class="nav-cta">Get the app</a>
       </nav>
       <button class="nav-burger" aria-label="Menu"><span></span></button>
     </div>
@@ -47,537 +75,180 @@
       <div class="blog-feed">
 
         <!-- v2.3.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.3.0</span>
             <time datetime="2026-11-13">November 13, 2026</time>
           </div>
-          <h2>Desert Stadium and national records</h2>
+          <h2><a href="/blog/v2-3-0/">Desert Stadium and national records</a></h2>
           <p>Reach race level 70 and you'll race in the Desert Stadium. 2.3.0 also gives every country its own records, with bonus XP when you set one, and lets you challenge any runner on the leaderboards.</p>
-          <p>Out now on iPhone. Android follows in a few days.</p>
-          <img src="img/stadiums/desert.webp" width="800" height="800" loading="lazy" alt="Desert Stadium: a white track and green infield under a huge sand-coloured roof, with tiers of cream seats" class="blog-image" />
-
-          <h3>Desert Stadium</h3>
-          <ul>
-            <li>A huge eight-lane arena for race levels 70 to 79</li>
-          </ul>
-
-          <h3>National records</h3>
-          <ul>
-            <li>Your results show your rank in your country next to your world rank</li>
-            <li>Set a world record for double XP, or a national record for +50%</li>
-            <li>Every new record pays, even when you beat your own</li>
-          </ul>
-
-          <h3>Leaderboards</h3>
-          <ul>
-            <li>Find a runner by name and tap Challenge to race their PB</li>
-            <li>Switch any race board between World and your country</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>See how much XP you've earned today</li>
-            <li>The pace line now follows your real PB splits</li>
-            <li>Top rivals now run at real world-record pace</li>
-            <li>More natural start poses, and the first-person camera now looks into the bends</li>
-            <li>New sounds for records, PBs and level-ups</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-3-0/">Read the 2.3.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.2.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.2.0</span>
             <time datetime="2026-11-09">November 9, 2026</time>
           </div>
-          <h2>National Stadium: race under the big screens</h2>
+          <h2><a href="/blog/v2-2-0/">National Stadium: race under the big screens</a></h2>
           <p>Reach race level 60 and you'll line up in the National Stadium. 2.2.0 also lets you challenge your friends with a single link, and every distance now plays like its real race.</p>
-          <img src="img/stadiums/national.webp" width="800" height="800" loading="lazy" alt="National Stadium: a green infield and grey track inside a huge bowl of black and orange seats" class="blog-image" />
-
-          <h3>National Stadium</h3>
-          <ul>
-            <li>A new eight-lane stadium for race levels 60 to 69</li>
-            <li>Big stadium screens show the race clock</li>
-          </ul>
-
-          <h3>Share your race</h3>
-          <ul>
-            <li>Share a card with your time, your runner and a QR code</li>
-            <li>It comes with a readable link: swipetrack.run/b/&lt;Name&gt;/&lt;distance&gt;</li>
-            <li>Friends who open it get your current PB as a time to beat</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>Every distance now plays like its real race</li>
-            <li>Sprints are all-out from the gun</li>
-            <li>Long races reward smart pacing: find a rhythm you can hold and save something for the finish</li>
-            <li>Rivals are retuned, so every distance is a fair fight at every level</li>
-          </ul>
-
-          <h3>Sound</h3>
-          <ul>
-            <li>A fuller wind sound as you pick up speed</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-2-0/">Read the 2.2.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.1.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.1.0</span>
             <time datetime="2026-10-28">October 28, 2026</time>
           </div>
-          <h2>Glacier Stadium: racing through the snow</h2>
+          <h2><a href="/blog/v2-1-0/">Glacier Stadium: racing through the snow</a></h2>
           <p>Reach level 50 and you'll race on ice. 2.1.0 is a big one: a snowy new stadium, a race you can hear, your runner in any colour you like, and a streak that pays off in XP.</p>
-
-          <h3>Glacier Stadium</h3>
-          <ul>
-            <li>A new eight-lane stadium by a glacier lake, for levels 50 to 59</li>
-            <li>Snow falls across the whole stadium and streaks past you at speed</li>
-            <li>The fog grows darker as night falls</li>
-          </ul>
-
-          <h3>Sound</h3>
-          <ul>
-            <li>The starter calls READY, SET, GO, and the pistol fires on GO</li>
-            <li>A bell rings for the last lap</li>
-            <li>Wind rises as you speed up, and you hear footsteps from you and your rivals</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>A new first-person camera you can turn on in Runner settings</li>
-            <li>From 1500m the race screen shows your pace instead of your speed</li>
-          </ul>
-
-          <h3>Your Runner &amp; Streak</h3>
-          <ul>
-            <li>Pick any colour from a colour wheel, with one swatch for each part of your outfit</li>
-            <li>A wider range of skin tones</li>
-            <li>Your daily streak now builds an XP bonus, all the way up to double XP</li>
-          </ul>
-
-          <h3>Android</h3>
-          <ul>
-            <li>Rank alerts and news arrive as push notifications</li>
-            <li>Tapping a notification opens the race it's about</li>
-            <li>Haptics, just like on iPhone</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-1-0/">Read the 2.1.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.0.4 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.0.4</span>
             <time datetime="2026-10-23">October 23, 2026</time>
           </div>
-          <h2>Canyon Stadium: eight lanes, seven rivals</h2>
+          <h2><a href="/blog/v2-0-4/">Canyon Stadium: eight lanes, seven rivals</a></h2>
           <p>Reach level 40 and you'll race deep in a slot canyon. 2.0.4 adds the toughest field yet, a bell that tells you when someone takes your rank, and a new way to start every race.</p>
-
-          <h3>Canyon Stadium</h3>
-          <ul>
-            <li>A new eight-lane stadium with a terracotta track, for level 40 and up</li>
-            <li>Seven rivals on the line, the biggest field in the game</li>
-            <li>It downloads in the background as you get close, and stays ready after you restart the app</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>Warm up, then line up with the field before the gun</li>
-            <li>Bolder runner name tags during the race</li>
-            <li>Meadow is now your first race, and Forest starts at level 2</li>
-          </ul>
-
-          <h3>Notifications &amp; Rankings</h3>
-          <ul>
-            <li>A bell on the Run tab shows rank changes and news, with a "while you were away" recap</li>
-            <li>Country flags next to every name on the leaderboards</li>
-          </ul>
-
-          <h3>Everything else</h3>
-          <ul>
-            <li>New runners get a suggested name to start with</li>
-            <li>The game lets you know when a new version is out</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-0-4/">Read the 2.0.4 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.0.3 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.0.3</span>
             <time datetime="2026-10-12">October 12, 2026</time>
           </div>
-          <h2>Coastal Stadium: race by the sea</h2>
+          <h2><a href="/blog/v2-0-3/">Coastal Stadium: race by the sea</a></h2>
           <p>Reach level 30 and you'll race on the coast. 2.0.3 adds a seaside stadium, reworks XP so every race level pays off, and lets you pick km or miles.</p>
-
-          <h3>Coastal Stadium</h3>
-          <ul>
-            <li>A new seven-lane stadium by the sea, for levels 30–39</li>
-            <li>It downloads in the background as you get close, so it's ready when you level up</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>Every lane now runs the full race distance</li>
-            <li>The race screen shows how many metres you've run</li>
-          </ul>
-
-          <h3>XP &amp; results</h3>
-          <ul>
-            <li>Results show how many races until your next attribute level, and your total XP for the race</li>
-            <li>XP has been reworked: a bigger bonus for every race level, and more XP for sprints</li>
-            <li>XP boosts now show on the Run tab</li>
-          </ul>
-
-          <h3>Profile &amp; Rankings</h3>
-          <ul>
-            <li>Choose km or miles in your profile</li>
-            <li>Rankings now focus on race distances</li>
-          </ul>
-
-          <h3>Faster start &amp; Android</h3>
-          <ul>
-            <li>The game starts faster, with a new loading screen</li>
-            <li>On Android, Sign in with Google to keep your runner safe</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-0-3/">Read the 2.0.3 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.0.2 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.0.2</span>
             <time datetime="2026-10-07">October 7, 2026</time>
           </div>
-          <h2>Splits every 100m and a bell for the last lap</h2>
+          <h2><a href="/blog/v2-0-2/">Splits every 100m and a bell for the last lap</a></h2>
           <p>2.0.2 is all about knowing where you stand mid-race. You now get a split every 100m against your PB pace, a bell buzz when the last lap starts, and rank alerts that tell you who just passed you.</p>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>Races of 200m and up show a split every 100m, compared with your PB pace</li>
-            <li>The first split allows for the standing start, so it isn't judged against a flying start</li>
-            <li>A light tap tells you when you're ahead of your PB pace at a split</li>
-            <li>In races of 800m and longer, a strong triple buzz rings with 400m to go, like the bell for the last lap</li>
-            <li>The warm-up before a race now shows each swipe as a sweep of falling dots, left side first, then right</li>
-          </ul>
-
-          <h3>Rank alerts</h3>
-          <ul>
-            <li>When someone passes you on a leaderboard, the alert now names them and says how many others passed you too</li>
-          </ul>
-
-          <h3>Fixes</h3>
-          <ul>
-            <li>A paused race no longer heats up your phone, because the game nearly stops drawing while the pause card is open</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-0-2/">Read the 2.0.2 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.0.1 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.0.1</span>
             <time datetime="2026-10-03">October 3, 2026</time>
           </div>
-          <h2>Mountain Stadium: race below the peaks</h2>
+          <h2><a href="/blog/v2-0-1/">Mountain Stadium: race below the peaks</a></h2>
           <p>Reach level 20 and you'll leave the city behind for the mountains. 2.0.1 adds a brand-new stadium and a round of fixes from your first days with 2.0.</p>
-          <img src="img/stadiums/mountain.webp" width="800" height="800" loading="lazy" alt="Mountain Stadium: a purple track below snowy alpine peaks, with a wooden roofed stand" class="blog-image" />
-
-          <h3>Mountain Stadium</h3>
-          <ul>
-            <li>A new six-lane stadium high in the mountains, for levels 20–29, with a purple track, a timber grandstand and snowy peaks on the horizon</li>
-            <li>Five rivals now line up with you, one more than in the City</li>
-            <li>The City Stadium gets a refreshed skyline, and daytime skies are brighter and clearer</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>The speed readout reacts faster, so you can see each stride pay off</li>
-            <li>New players' first 100m now really does start on its own after the 10-second countdown</li>
-          </ul>
-
-          <h3>Rankings &amp; Runner</h3>
-          <ul>
-            <li>Rankings remembers the leaderboard you looked at last</li>
-            <li>Tapping a top speed, average speed or total distance rank alert opens that leaderboard</li>
-            <li>One Save button, pinned to the bottom of the Runner tab, saves your name and your look together</li>
-            <li>The level number now sits right in the middle of the level-up ring</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-0-1/">Read the 2.0.1 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v2.0.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v2.0.0</span>
             <time datetime="2026-09-30">September 30, 2026</time>
           </div>
-          <h2>SwipeTrack 2.0: a whole new look, City Stadium &amp; daily streaks</h2>
+          <h2><a href="/blog/v2-0-0/">SwipeTrack 2.0: a whole new look, City Stadium &amp; daily streaks</a></h2>
           <p>2.0 is the biggest update yet. Every screen has been redesigned, there's a new stadium to reach, and racing every day now pays off with bigger XP and new gear.</p>
-
-          <h3>A new look everywhere</h3>
-          <ul>
-            <li>A darker, cleaner design with big numbers, stadium photos, and a color for every distance</li>
-            <li>Four tabs at the bottom: Run, Progress, Rankings, and Runner</li>
-            <li>Race cards show the stadium, your race level, your PB, the XP for a win, and your next goal</li>
-            <li>New icons throughout</li>
-          </ul>
-
-          <h3>City Stadium</h3>
-          <ul>
-            <li>A brand-new five-lane stadium in the middle of the city, for levels 10–19</li>
-            <li>Reaching a new stadium now gets its own moment, with the option to race there straight away</li>
-          </ul>
-
-          <h3>Daily streak</h3>
-          <ul>
-            <li>Finish one race a day to build a streak. Your bonus XP grows with it, from +10% on day 1 to +50% from day 6 on</li>
-            <li>Unlock the Flame shirt on day 3 and Gold shoes on day 7</li>
-            <li>An evening reminder lets you know when your streak is about to end</li>
-          </ul>
-
-          <h3>Racing</h3>
-          <ul>
-            <li>A new warm-up before each race shows which side to swipe next</li>
-            <li>A new race HUD: your place, time, distance to go, speed, stamina, and a dot for every rival</li>
-            <li>In races of 800m and longer, every 400m tells you how far ahead of or behind your PB pace you are</li>
-            <li>The race screens also work with your iPhone turned sideways</li>
-          </ul>
-
-          <h3>Results and level-ups</h3>
-          <ul>
-            <li>One new results screen with your place, time, world rank, and the XP you earned for each attribute</li>
-            <li>A PB now gets confetti</li>
-            <li>Attribute level-ups get their own full-screen moment that explains what improved</li>
-            <li>“Run again” shows the time you need to move up the world rankings</li>
-          </ul>
-
-          <h3>Progress, Rankings &amp; Runner</h3>
-          <ul>
-            <li>Progress: your runner level, total races, distance and top speed, your four attributes, and a record for every distance with its world rank</li>
-            <li>Rankings: a podium for each distance and the runners just above and below you</li>
-            <li>Runner: pick your name, color your runner with a live preview, and link Sign in with Apple</li>
-            <li>Tapping a rank alert now opens that distance so you can race straight back</li>
-          </ul>
-
-          <h3>New players and reliability</h3>
-          <ul>
-            <li>New players start with a short welcome and go straight into their first 100m, then pick a name</li>
-            <li>If your connection drops at the finish, your race is saved and sent again, and your XP and rank fill in when it gets through</li>
-          </ul>
+          <a class="blog-more" href="/blog/v2-0-0/">Read the 2.0.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.3.2 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.3.2</span>
             <time datetime="2026-09-24">September 24, 2026</time>
           </div>
-          <h2>A new race menu, a live runner preview &amp; fresh outfit colors</h2>
+          <h2><a href="/blog/v1-3-2/">A new race menu, a live runner preview &amp; fresh outfit colors</a></h2>
           <p>v1.3.2 makes it easier to pick your next race and to make your runner your own. Every distance now shows what you can win, and the Customize tab shows your runner in 3D as you change it.</p>
-
-          <h3>A new race menu</h3>
-          <ul>
-            <li>Swipe left and right through the distances, from 100m to 10000m. The game remembers the last one you picked.</li>
-            <li>Each race card shows the stadium, your race level, your PB, and the XP for 1st, 2nd, and 3rd place</li>
-            <li>A goal for every race: unlock the next stadium, reach a new attribute level, or the time you need to move up the world rankings</li>
-            <li>A new bottom navigation bar with icons</li>
-          </ul>
-
-          <h3>See your runner before you save</h3>
-          <ul>
-            <li>The Customize tab now has a live 3D preview of your runner</li>
-            <li>Drag the preview to turn your runner around</li>
-            <li>Colors update right away, and nothing changes until you tap Save</li>
-          </ul>
-
-          <h3>New outfit colors</h3>
-          <ul>
-            <li>New bright clothing colors: yellow, hi-vis green, red, and blue</li>
-            <li>New everyday colors: beige, olive, and khaki</li>
-            <li>Shoes now keep their own color and no longer pick up the tint of your shirt or shorts</li>
-            <li>Updated skin tones and a more natural red hair color</li>
-          </ul>
-
-          <h3>Smoother racing</h3>
-          <ul>
-            <li>Motion blur now builds up more gradually with speed</li>
-            <li>The track and your rivals blur at speed, while your own runner stays sharp</li>
-            <li>A retuned daytime sky with softer, more natural light</li>
-          </ul>
-
-          <h3>Friendlier first races</h3>
-          <ul>
-            <li>After your first race, a short tip points you to where you can customize your runner</li>
-            <li>We now ask you to pick a display name only when you reach the global Top 10, so your name shows up where it counts</li>
-          </ul>
+          <a class="blog-more" href="/blog/v1-3-2/">Read the 1.3.2 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.3.1 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.3.1</span>
             <time datetime="2026-09-22">September 22, 2026</time>
           </div>
-          <h2>Into the forest: a new stadium and sharper racing</h2>
+          <h2><a href="/blog/v1-3-1/">Into the forest: a new stadium and sharper racing</a></h2>
           <p>Stadium progression takes its next step in v1.3.1. Reach level 5 and leave the Meadow for a purpose-built four-lane venue surrounded by grandstands, trees, and deep forest green.</p>
-
-          <h3>The Forest Stadium</h3>
-          <ul>
-            <li>A completely new four-lane stadium for levels 5–9</li>
-            <li>Track markings and staggered starts aligned for every race distance, from 100m to 10000m</li>
-            <li>New forest scenery, trackside structures, seating, and materials give the venue its own atmosphere</li>
-          </ul>
-
-          <h3>A sharper race feel</h3>
-          <ul>
-            <li>Quicker, more natural acceleration for you and your rivals</li>
-            <li>Rebalanced speed, stamina, fatigue, rival pacing, and progression</li>
-            <li>Smoother camera response and refined start and running animation blends</li>
-          </ul>
-
-          <h3>A better first run</h3>
-          <ul>
-            <li>A hands-on swipe check before the countdown lets you practise both directions before the race begins</li>
-            <li>The 100m is now gently highlighted for brand-new runners</li>
-            <li>Leaderboard entries now show the relevant race or attribute level</li>
-          </ul>
-
-          <h3>Reliability fixes</h3>
-          <ul>
-            <li>Improved race-result recovery when a completed race needs to refresh its saved state</li>
-            <li>Fixed an iOS issue that could prevent Sign in with Apple from returning to the game</li>
-            <li>Clearer account error messages and more consistent XP rewards between the game and server</li>
-          </ul>
+          <a class="blog-more" href="/blog/v1-3-1/">Read the 1.3.1 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.3.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.3.0</span>
             <time datetime="2026-09-18">September 18, 2026</time>
           </div>
-          <h2>Female runner, a brand-new animation system &amp; the pain of the final lap</h2>
+          <h2><a href="/blog/v1-3-0/">Female runner, a brand-new animation system &amp; the pain of the final lap</a></h2>
           <p>This is the biggest visual update since launch. Your runner no longer just moves down the track — they set up on the line, launch out of the start, change form as the race grinds them down, and react when they cross the finish.</p>
-
-          <h3>Choose your runner</h3>
-          <ul>
-            <li>New female runner model — pick MALE or FEMALE in Personalization</li>
-            <li>All existing shirt, pants, shoes, skin, and hair colors work on both runners</li>
-            <li>Your choice is saved to your account and syncs across devices</li>
-          </ul>
-
-          <h3>A completely rebuilt animation system</h3>
-          <ul>
-            <li>Dedicated on-your-marks stances and start launches — sprint starts are explosive, distance starts are controlled</li>
-            <li>Separate sprint and distance running styles that blend automatically based on your event and current speed</li>
-            <li>Fatigue now shows in the form: as stamina drains, posture breaks down and the stride gets heavy</li>
-            <li>Stride cadence is matched to real velocity, so there's no more foot sliding at any pace</li>
-            <li>New finish reactions — a victory run and celebration for a win, exhaustion or recovery for everyone else</li>
-            <li>AI rivals use the exact same animation system, including their own finish reactions and placings</li>
-          </ul>
-
-          <h3>Feel the exhaustion</h3>
-          <ul>
-            <li>Vision darkens and tunnel-visions in as your stamina empties — hang on to the line</li>
-            <li>The screen blurs as accumulated fatigue peaks late in long races</li>
-            <li>Subtle brightness lift at top speed to sell the pace</li>
-          </ul>
-
-          <h3>Leaderboards &amp; progression</h3>
-          <ul>
-            <li>New "Around You" leaderboard view — if you're outside the top 5, you now see the runners directly above and below you instead of an unreachable top 10</li>
-            <li>Your global rank now shows as position out of total runners</li>
-            <li>Rebalanced XP rewards, especially for 3000m, 5000m, and 10000m</li>
-          </ul>
-
-          <h3>Fixes &amp; polish</h3>
-          <ul>
-            <li>Corrected lane line alignment on the Meadow stadium track</li>
-            <li>Runners now sit properly on the track surface instead of floating</li>
-            <li>Expired sessions refresh automatically instead of failing a sync</li>
-            <li>The sync retry button now works when the connection failed during startup</li>
-            <li>Refreshed navigation icons, leaderboard dropdown, and Personalization layout</li>
-          </ul>
+          <a class="blog-more" href="/blog/v1-3-0/">Read the 1.3.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.2.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.2.0</span>
             <time datetime="2026-09-10">September 10, 2026</time>
           </div>
-          <h2>Cloud saves, runner profiles &amp; smarter leaderboards</h2>
-          <ul>
-            <li>New SwipeTrack guest accounts keep progression synchronized with our game service — no Apple login required</li>
-            <li>Optional Sign in with Apple linking for reinstall and cross-device account recovery</li>
-            <li>Custom public display names and runner colors for shirt, pants, shoes, skin, and hair</li>
-            <li>Authoritative race results and progression with safer recovery from interrupted submissions</li>
-            <li>Unified global leaderboards preserving existing rankings during our PlayFab-to-Supabase transition</li>
-            <li>Optional push notifications when another runner knocks you down the leaderboard</li>
-            <li>Permanent in-app account deletion and refreshed Profile, header, and bottom navigation</li>
-          </ul>
+          <h2><a href="/blog/v1-2-0/">Cloud saves, runner profiles &amp; smarter leaderboards</a></h2>
+          <p>What's new in SwipeTrack 1.2.0: New SwipeTrack guest accounts keep progression synchronized with our game service — no Apple login required; Optional Sign in with Apple linking for reinstall and cross-device account recovery; Custom public display names and runner colors for shirt, pants, shoes, skin, and hair.</p>
+          <a class="blog-more" href="/blog/v1-2-0/">Read the 1.2.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.1.1 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.1.1</span>
             <time datetime="2026-05-27">May 27, 2026</time>
           </div>
-          <h2>Performance &amp; landscape mode</h2>
-          <ul>
-            <li>Performance improvements across the board</li>
-            <li>In-game landscape resolution for a wider view and better gameplay</li>
-            <li>Version number now displayed on the stats page</li>
-            <li>Global ranking total display added</li>
-            <li>New achievement screen for reaching a new global ranking position post-race</li>
-            <li>Various bugfixes</li>
-          </ul>
+          <h2><a href="/blog/v1-1-1/">Performance &amp; landscape mode</a></h2>
+          <p>What's new in SwipeTrack 1.1.1: Performance improvements across the board; In-game landscape resolution for a wider view and better gameplay; Version number now displayed on the stats page.</p>
+          <a class="blog-more" href="/blog/v1-1-1/">Read the 1.1.1 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.1.0 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.1.0</span>
             <time datetime="2026-05-23">May 23, 2026</time>
           </div>
-          <h2>3000m, stadium tribunes &amp; progression overhaul</h2>
-          <ul>
-            <li>Added 3000m distance</li>
-            <li>Better track markers for clearer navigation</li>
-            <li>10 different stadium tribunes based on your run level</li>
-            <li>Improved XP progression curve</li>
-            <li>Improved HUD stamina allocation display</li>
-            <li>Bugfixes</li>
-          </ul>
+          <h2><a href="/blog/v1-1-0/">3000m, stadium tribunes &amp; progression overhaul</a></h2>
+          <p>What's new in SwipeTrack 1.1.0: Added 3000m distance; Better track markers for clearer navigation; 10 different stadium tribunes based on your run level.</p>
+          <a class="blog-more" href="/blog/v1-1-0/">Read the 1.1.0 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.0.2 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.0.2</span>
             <time datetime="2026-05-14">May 14, 2026</time>
           </div>
-          <h2>Stability update</h2>
-          <ul>
-            <li>Bugfixes</li>
-          </ul>
+          <h2><a href="/blog/v1-0-2/">Stability update</a></h2>
+          <p>What's new in SwipeTrack 1.0.2: Bugfixes.</p>
+          <a class="blog-more" href="/blog/v1-0-2/">Read the 1.0.2 notes <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- v1.0.1 -->
-        <article class="blog-post reveal">
+        <article class="blog-post blog-item reveal">
           <div class="blog-meta">
             <span class="blog-version">v1.0.1</span>
             <time datetime="2026-05-14">May 14, 2026</time>
           </div>
-          <h2>Launch day polish</h2>
-          <ul>
-            <li>Performance improvements</li>
-            <li>New fonts for improved readability</li>
-            <li>UI tweaks for better device compatibility</li>
-          </ul>
+          <h2><a href="/blog/v1-0-1/">Launch day polish</a></h2>
+          <p>What's new in SwipeTrack 1.0.1: Performance improvements; New fonts for improved readability; UI tweaks for better device compatibility.</p>
+          <a class="blog-more" href="/blog/v1-0-1/">Read the 1.0.1 notes <span aria-hidden="true">→</span></a>
         </article>
-
-        <!-- ADD NEW POSTS ABOVE THIS LINE -->
 
       </div>
     </div>
@@ -588,25 +259,25 @@
     <div class="container">
       <div class="foot-grid">
         <div class="foot-col foot-brand">
-          <a class="brand" href="index.html"><img src="img/logo.svg" width="168" height="42" class="brand-logo" alt="SwipeTrack" /></a>
+          <a class="brand" href="/"><img src="/img/logo.svg" width="168" height="42" class="brand-logo" alt="SwipeTrack" /></a>
           <p>Swipe to run. Race 100m to 10,000m on iPhone and Android.</p>
         </div>
         <div class="foot-col">
           <h4>Game</h4>
-          <a href="index.html#play">How it plays</a>
-          <a href="index.html#distances">Distances</a>
-          <a href="index.html#faq">FAQ</a>
-          <a href="blog.html">Blog</a>
+          <a href="/index.html#play">How it plays</a>
+          <a href="/index.html#distances">Distances</a>
+          <a href="/index.html#faq">FAQ</a>
+          <a href="/blog.html">Blog</a>
         </div>
         <div class="foot-col">
           <h4>Support</h4>
-          <a href="support.html">Help Center</a>
+          <a href="/support.html">Help Center</a>
           <a href="mailto:support@swipetrack.run">Email us</a>
         </div>
         <div class="foot-col">
           <h4>Legal</h4>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
           <a href="#" data-cookie-settings>Cookie settings</a>
         </div>
       </div>
@@ -617,6 +288,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
